@@ -21,6 +21,11 @@ map <leader>v :vsp
 map <leader>p :sp
 map <leader>n :new 
 map <leader>b   :ConqueTerm bash<CR>
+map gt  :tabn<CR>
+map gT  :tabp<CR>
+nmap [c <Plug>GitGutterPrevHunk
+nmap ]c <Plug>GitGutterNextHunk
+map <c-a> :Ag!<space>
 " 由于已有默认的<leader>q 打开 quickfix 窗口
 ""map <leader>c :copen<CR>
 map <leader>c :q!<CR>
