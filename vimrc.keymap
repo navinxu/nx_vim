@@ -3,15 +3,15 @@
 "" "endfunc
 
 
-autocmd filetype python map <leader>z :AsyncRun python %<CR>
-autocmd filetype php map <leader>z :AsyncRun php %<CR>
+autocmd filetype python map <leader>z :AsyncRun python %<space>>
+autocmd filetype php map <leader>z :AsyncRun php %<space>
 autocmd filetype vim map <leader>z :so %<CR>
 "" "autocmd filetype cpp map <leader>z :AsyncRun g++ % -o a.out
 autocmd filetype c map <leader>g :AsyncRun gcc % -o %:t:r.out <CR>
-autocmd filetype c map <leader>z :!./%:t:r.out
+autocmd filetype c map <leader>z :!./%:t:r.out<space>
 autocmd filetype cpp map <leader>g :AsyncRun g++ % -o %:t:r.out <CR>
-autocmd filetype cpp map <leader>z :!./%:t:r.out
-autocmd filetype sh map <leader>z :AsyncRun /bin/bash %<CR>
+autocmd filetype cpp map <leader>z :!./%:t:r.out<space>
+autocmd filetype sh map <leader>z :AsyncRun /bin/bash %<space>
 autocmd filetype javascript map <leader>z :AsyncRun node %<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
