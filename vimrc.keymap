@@ -3,7 +3,7 @@
 "" "endfunc
 
 
-autocmd filetype python map <leader>z :AsyncRun python %<space>>
+autocmd filetype python map <leader>z :AsyncRun python %<space
 autocmd filetype php map <leader>z :AsyncRun php %<space>
 autocmd filetype vim map <leader>z :so %<CR>
 "" "autocmd filetype cpp map <leader>z :AsyncRun g++ % -o a.out
