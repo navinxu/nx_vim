@@ -13,3 +13,7 @@ endif
 if filereadable(expand("~/.vim/vimrc.plugin.conf"))
     source ~/.vim/vimrc.plugin.conf
 endif
+
+if filereadable(expand("~/.vim/vimrc.themes"))
+    source ~/.vim/vimrc.themes
+endif
