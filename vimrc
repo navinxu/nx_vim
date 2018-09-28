@@ -17,3 +17,4 @@ endif
 if filereadable(expand("~/.vim/vimrc.themes"))
     source ~/.vim/vimrc.themes
 endif
+
