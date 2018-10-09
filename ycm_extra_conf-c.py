@@ -89,6 +89,8 @@ get_python_inc(),
 'cpp/ycm/tests/gmock/include',
 '-isystem',
 'cpp/ycm/benchmarks/benchmark/include',
+'-I',
+'/usr/i686-w64-mingw32/include/conio.h',
 ]
 
 # Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,

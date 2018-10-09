@@ -1,9 +1,10 @@
 "" "func Python() 
 "" "    exec '!python %'
 "" "endfunc
+filetype on
 
 
-autocmd filetype python map <leader>z :AsyncRun python %<space
+autocmd filetype python map <leader>z :AsyncRun python %<space>
 autocmd filetype php map <leader>z :AsyncRun php %<space>
 autocmd filetype vim map <leader>z :so %<CR>
 "" "autocmd filetype cpp map <leader>z :AsyncRun g++ % -o a.out
@@ -60,11 +61,11 @@ function AddTitleForC()
      call setline(1,"/*================================================================")
     call append(line("."),   "*   Copyright (C) ".strftime("%Y")." Navin Xu. All rights reserved.")
     call append(line(".")+1, "*   ")
-    call append(line(".")+2, "*   文件名称：".expand("%:t"))
-    call append(line(".")+3, "*   创 建 者：Navin Xu")
-    call append(line(".")+4, "*   电子邮箱：admin@navinxu.com")
-    call append(line(".")+5, "*   创建日期：".strftime("%Y年%m月%d日"))
-    call append(line(".")+6, "*   描    述：")
+    call append(line(".")+2, "*   Filename    ：".expand("%:t"))
+    call append(line(".")+3, "*   Author      ：Navin Xu")
+    call append(line(".")+4, "*   E-Mail      ：admin@navinxu.com")
+    call append(line(".")+5, "*   Create Date ：".strftime("%Y年%m月%d日"))
+    call append(line(".")+6, "*   Description ：")
     call append(line(".")+7, "================================================================*/")
     call append(line(".")+8, "")
     call append(line(".")+9, "")
@@ -82,7 +83,6 @@ function AddTitleForPython()
     call append(8,"# * Filename      : ".expand("%:t"))
     call append(9,"# * Description   : ")
     call append(10,"# **********************************************************")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
 endfunction
 
 "" 表示.sh文件添加此行数注释
