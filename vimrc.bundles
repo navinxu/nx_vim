@@ -6,6 +6,7 @@ Plug 'scrooloose/nerdtree'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
+
 Plug 'fholgado/minibufexpl.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'Xuyuanp/nerdtree-git-plugin'
