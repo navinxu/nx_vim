@@ -29,7 +29,7 @@ sudo python3 -m pip install pyflakes
 9. eslint => 通过 npm 来安装
 应用 eslint 之前还要在项目的根目录生成js配置文件：
 ```sh
-eslint init
+eslint --init
 ```
 
 注意：插件 YouCompleteMe 需要单独安装，需要 Python3、npm 和 Clang 的支持。
