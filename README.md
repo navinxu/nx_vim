@@ -5,6 +5,7 @@ My Vim Configuration.
 1. php
 2. c/c++
 3. html、css和js(/nodejs)
+4. python3
 
 ## Installation
 1. 新建一个空目录，名为“bundles”
