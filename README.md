@@ -8,10 +8,15 @@ My Vim Configuration.
 4. python3
 
 ## 插件的安装
-1. 新建一个空目录，名为“bundles”
-2. 在当前用户目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
-3. 运行 Vim。
-4. 普通模式下输入 :PlugInstall　，按下回车键，稍等。（这一步之前需要安装Git）
+1. 安装 Git
+2. 进入当前用户家目录,并克隆主分支到本地的 .vim 目录上
+```sh
+git clone https://github.com/navinxu/nx_vim.git .vim
+```
+3. 进入 .vim 目录，并新建一个空目录，名为“bundles”
+4. 在当前用户家目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
+5. 运行 Vim。
+6. 普通模式下输入 :PlugInstall　，按下回车键，稍等。）
 
 ## 依赖的安装
 需要的依赖：
