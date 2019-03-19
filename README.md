@@ -20,6 +20,7 @@ My Vim Configuration.
 sudo python3 -m pip install pyflakes
 ```
 8. npm nodejs
-9. eslint => 通过 npm 来安装
+10. eslint => 通过 npm 来安装
+
 注意：插件 YouCompleteMe 需要单独安装，需要 Python3 和 Clang 的支持。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
