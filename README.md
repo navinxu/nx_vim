@@ -37,5 +37,7 @@ sudo python3 -m pip install pyflakes
 eslint --init
 ```
 
-注意：插件 YouCompleteMe 需要单独安装，需要 Python3、npm 和 Clang 的支持。
+注意：
+* 插件 YouCompleteMe 需要单独安装，需要 Python3、npm 和 Clang 的支持。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
+* 本配置仅支持 Linux 各种发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
