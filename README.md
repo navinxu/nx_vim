@@ -36,8 +36,18 @@ sudo python3 -m pip install pyflakes
 ```sh
 eslint --init
 ```
+10. Ag => 查找文本利器，对应 rking/ag.vim 插件
+```sh
+sudo apt-get install silversearcher-ag
+```
+11. Ack => 对应 dyng/ctrlsf.vim 插件，全局搜索
+```sh
+sudo apt-get install -y ack
+```
 
 注意：
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、npm 和 Clang 的支持。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
-* 本配置仅支持 Linux 各种发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
+* 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
+
+

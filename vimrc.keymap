@@ -1,6 +1,3 @@
-"" "func Python() 
-"" "    exec '!python %'
-"" "endfunc
 filetype on
 
 
@@ -16,17 +13,17 @@ autocmd filetype sh map <leader>z :AsyncRun /bin/bash %<space>
 autocmd filetype javascript map <leader>z :AsyncRun node %<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
-map <leader>e :e
-map <leader>s :save 
-map <leader>v :vsp
-map <leader>p :sp
-map <leader>n :new 
+map <leader>e :e<space>
+map <leader>s :save<space> 
+map <leader>v :vsp<space>
+map <leader>p :sp<space>
+map <leader>n :new<space> 
 map <leader>b   :ConqueTerm bash<CR>
 map gt  :tabn<CR>
 map gT  :tabp<CR>
 nmap [c <Plug>GitGutterPrevHunk
 nmap ]c <Plug>GitGutterNextHunk
-map <c-a> :Ag!<space>
+map <leader>A :Ag<space>
 " 由于已有默认的<leader>q 打开 quickfix 窗口
 ""map <leader>c :copen<CR>
 map <leader>c :q!<CR>
@@ -34,9 +31,12 @@ map <leader>c :q!<CR>
 "" "nmap <F9> :SCCompile<CR>
 "" "nmap <F10> :SCCompileRun<CR>
 
+" dyng/ctrlsf.vim config
+nnoremap <C-f> :CtrlSF<Space>
 
 
 function AddAuthor()
+
     let n=1
     while n < 11
         let line = getline(n)
