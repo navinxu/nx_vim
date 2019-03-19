@@ -1,4 +1,4 @@
-# nx_vim
+# Navin 的 VIM 配置
 My Vim Configuration.
 
 ## 经过配置的编辑器支持的编程语言
@@ -7,7 +7,7 @@ My Vim Configuration.
 3. html、css和js(/nodejs)
 4. python3
 
-## Installation
+## 插件的安装
 1. 新建一个空目录，名为“bundles”
 2. 在当前用户目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
 3. 运行 Vim。
