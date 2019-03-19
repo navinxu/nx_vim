@@ -1,6 +1,11 @@
 # nx_vim
 My Vim Configuration.
 
+## 经过配置的编辑器支持的编程语言
+1. php
+2. c/c++
+3. html、css和js(/nodejs)
+
 ## Installation
 1. 新建一个空目录，名为“bundles”
 2. 在当前用户目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
