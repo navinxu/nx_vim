@@ -15,10 +15,10 @@ autocmd filetype java map <leader>g :!javac % && java %:r<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>e :e<space>
-map <leader>s :save<space> 
+map <leader>s :save<space>
 map <leader>v :vsp<space>
 map <leader>p :sp<space>
-map <leader>n :new<space> 
+map <leader>n :new<space>
 map <leader>b   :ConqueTerm bash<CR>
 map gt  :tabn<CR>
 map gT  :tabp<CR>
@@ -33,7 +33,7 @@ map <leader>c :q!<CR>
 "" "nmap <F10> :SCCompileRun<CR>
 
 " dyng/ctrlsf.vim config
-nnoremap <C-F> :CtrlSF<Space>
+nnoremap <c-F> :CtrlSF<Space>
 
 
 function AddAuthor()
@@ -98,5 +98,5 @@ function AddTitleForShell()
     call append(7,"# * Description   : ")
     call append(8,"# **********************************************************")
 endfunction
-autocmd BufNewFile *.[ch],*.py,*.hpp,*.cpp,Makefile,*.mk,*.sh exec ":call AddAuthor()"
+autocmd BufNewFile *.[ch],*.java,*.py,*.hpp,*.cpp,Makefile,*.mk,*.sh exec ":call AddAuthor()"
 
