@@ -1,6 +1,12 @@
 # Navin 的 VIM 配置
 My Vim Configuration.
 
+## 适合的 Vim 版本
+vim-gtk3 => 支持 Pyhton3
+```sh
+sudo apt-get install -y vim-gtk3
+```
+
 ## 经过配置的编辑器支持的编程语言
 1. php
 2. c/c++
@@ -14,7 +20,7 @@ My Vim Configuration.
 ```sh
 git clone https://github.com/navinxu/nx_vim.git .vim
 ```
-3. 进入 .vim 目录，并新建一个空目录，名为“bundles”
+3. 进入 .vim 目录，并新建一个空目录，名为“bundles”。
 4. 在当前用户家目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
 5. 运行 Vim。
 6. 普通模式下输入 :PlugInstall　，按下回车键，稍等。）
