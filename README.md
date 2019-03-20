@@ -6,6 +6,7 @@ My Vim Configuration.
 2. c/c++
 3. html、css和js(/nodejs)
 4. python3
+5. java
 
 ## 插件的安装
 1. 安装 Git
@@ -44,9 +45,15 @@ sudo apt-get install silversearcher-ag
 ```sh
 sudo apt-get install -y ack
 ```
+12. jdk-8.0 => 以支持 java 语言
+```sh
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java8-installer
+```
 
 注意：
-* 插件 YouCompleteMe 需要单独安装，需要 Python3、npm 和 Clang 的支持。
+* 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
 * 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
 

@@ -33,7 +33,7 @@ map <leader>c :q!<CR>
 "" "nmap <F10> :SCCompileRun<CR>
 
 " dyng/ctrlsf.vim config
-nnoremap <C-f> :CtrlSF<Space>
+nnoremap <C-F> :CtrlSF<Space>
 
 
 function AddAuthor()

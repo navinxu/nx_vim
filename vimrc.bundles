@@ -40,4 +40,5 @@ Plug 'nightsense/rusticated'
 Plug 'crusoexia/vim-monokai'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
