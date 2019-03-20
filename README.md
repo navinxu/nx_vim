@@ -21,7 +21,7 @@ git clone https://github.com/navinxu/nx_vim.git .vim
 
 ## 依赖的安装
 需要的依赖：
-1. clang >= 8.0
+1. clang >= 7.0
 2. cscope
 3. ctags
 4. python3

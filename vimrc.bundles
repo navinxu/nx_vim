@@ -2,7 +2,7 @@ call plug#begin('~/.vim/bundles')
 Plug 'Valloric/YouCompleteMe'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'scrooloose/nerdtree'
-"Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'Lokaltog/vim-powerline'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
