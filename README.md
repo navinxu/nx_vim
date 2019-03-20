@@ -13,6 +13,7 @@ sudo apt-get install -y vim-gtk3
 3. html、css和js(/nodejs)
 4. python3
 5. java
+6. json
 
 ## 插件的安装
 1. 安装 Git。
@@ -27,18 +28,15 @@ git clone https://github.com/navinxu/nx_vim.git .vim
 
 ## 依赖的安装
 需要的依赖：
-1. clang >= 7.0
+1. clang => 版本>=7.0，这要查看YCM的README文件
 2. cscope
 3. ctags
-4. python3
+4. python3、Python2
 5. gcc
 6. php
-7. pyflakes => 通过 pip3 来安装
-```sh
-sudo python3 -m pip install pyflakes
-```
+7. flake8 => 支持 Python 的语法检查
 8. npm nodejs
-9. eslint => 通过 npm 来安装
+9. eslint => 支持 js 的语法检查，通过 npm 来安装
 应用 eslint 之前还要在项目的根目录生成js配置文件：
 ```sh
 eslint --init
@@ -57,6 +55,9 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
 sudo apt install oracle-java8-installer
 ```
+13. jsonlint => 支持 json 的语法检查
+14. tidy => 支持 HTML 的语法检查
+15. stylelint => 支持 CSS 的语法检查
 
 注意：
 * 插件 YouCompleteMe 需要单独安装，需要 Python2、Python3、java、npm 和 Clang 的支持。
