@@ -9,7 +9,7 @@ My Vim Configuration.
 5. java
 
 ## 插件的安装
-1. 安装 Git
+1. 安装 Git。
 2. 进入当前用户家目录,并克隆主分支到本地的 .vim 目录上
 ```sh
 git clone https://github.com/navinxu/nx_vim.git .vim
@@ -53,7 +53,7 @@ sudo apt install oracle-java8-installer
 ```
 
 注意：
-* 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持。
+* 插件 YouCompleteMe 需要单独安装，需要 Python2、Python3、java、npm 和 Clang 的支持。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
 * 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
 
