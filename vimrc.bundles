@@ -41,4 +41,9 @@ Plug 'crusoexia/vim-monokai'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
 Plug 'ludovicchabant/vim-gutentags'
+
+Plug 'sillybun/vim-repl', {'do': './install.sh'}
+Plug 'sillybun/vim-async', {'do': './install.sh'}
+"""Plug 'sillybun/zytutilo'
+
 call plug#end()
