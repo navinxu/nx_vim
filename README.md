@@ -2,7 +2,7 @@
 My Vim Configuration.
 
 ## 适合的 Vim 版本
-vim-gtk3 => >= 8.0 且支持 Pyhton3
+vim-gtk3 => 要求 >=8.0 且支持 Python3
 ```sh
 sudo apt-get install -y vim-gtk3
 ```
