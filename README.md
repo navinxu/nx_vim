@@ -47,6 +47,9 @@ sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/
 7. flake8 => 支持 Python 的语法检查
 8. npm nodejs
 9. eslint => 支持 js 的语法检查，通过 npm 来安装
+```sh
+sudo npm i -g eslint
+```
 应用 eslint 之前还要在项目的根目录生成js配置文件：
 ```sh
 eslint --init
@@ -66,8 +69,17 @@ sudo apt update
 sudo apt install oracle-java8-installer
 ```
 13. jsonlint => 支持 json 的语法检查
+```sh
+sudo npm install -g jsonlint
+```
 14. tidy => 支持 HTML 的语法检查
+```sh
+sudo apt-get install -y tidy
+```
 15. stylelint => 支持 CSS 的语法检查
+```sh
+sudo npm i -g stylelint
+```
 16. cmake => 编译YCM时有用
 ```sh
 sudo apt install build-essential cmake python3-dev
