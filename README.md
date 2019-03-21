@@ -1,4 +1,4 @@
-# Navin 的 VIM 配置
+# Navin 的 Vim 配置
 My Vim Configuration.
 
 ## 适合的 Vim 版本
