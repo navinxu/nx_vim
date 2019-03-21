@@ -32,6 +32,10 @@ git clone https://github.com/navinxu/nx_vim.git .vim
 ```
 需要的依赖：
 1. clang => 版本>=7.0，这要查看YCM的README文件
+```sh
+sudo apt-get install -y clang-7
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so.7
+```
 2. cscope
 3. ctags
 4. python3、Python2
@@ -65,7 +69,7 @@ sudo apt install oracle-java8-installer
 ```sh
 sudo apt install build-essential cmake python3-dev
 ```
-17. powerline => 用于支持 powerline 插件
+17. pip3 和 powerline => 用于支持 powerline 插件
 ```sh
 sudo apt-get install -y python3-pip
 python3 -m pip install --user powerline-status
@@ -75,7 +79,6 @@ python3 -m pip install --user powerline-status
 sudo apt-get install -y fonts-powerlione
 # 重启机器
 ```
-19. python3-pip
 
 注意：
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持，如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
