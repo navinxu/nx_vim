@@ -108,6 +108,7 @@ sudo npm i -g textlint
 ```
 
 注意：
+* ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持，如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
 * 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
