@@ -67,6 +67,8 @@ flags = [
     # '/usr/include/c++/7/',
     '-I',
     '/usr/include/c++/8/',
+    '-I',
+    '/usr/include/c++/7/',
     '-isystem',
     'cpp/pybind11',
     '-isystem',

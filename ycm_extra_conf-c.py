@@ -71,6 +71,8 @@ flags = [
     '-isystem',
     '/usr/lib/gcc/x86_64-linux-gnu/8/include/'
     '-isystem',
+    '/usr/lib/gcc/x86_64-linux-gnu/7/include/'
+    '-isystem',
     '/usr/include/',
     '-isystem',
     'cpp/pybind11',
