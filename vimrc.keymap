@@ -23,6 +23,7 @@ map <leader>b   :ConqueTerm bash<CR>
 map gt  :tabn<CR>
 map gT  :tabp<CR>
 map nT  :tabnew<space>
+map eT  :tabe<space>
 nmap [c <Plug>GitGutterPrevHunk
 nmap ]c <Plug>GitGutterNextHunk
 map <leader>A :Ag<space>
