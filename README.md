@@ -7,13 +7,16 @@ vim-gtk3 => 要求 >=8.0 且支持 Python3
 sudo apt-get install -y vim-gtk3
 ```
 
-## 经过配置的编辑器支持的编程语言
+## 支持的编程语言
 1. php
 2. c/c++
 3. html、css和js(/nodejs)
 4. python3
 5. java
 6. json
+7. vimscript
+8. bash/shell
+9. markdown
 
 ## 插件的安装
 1. 安装 Git。
@@ -78,6 +81,18 @@ python3 -m pip install --user powerline-status
 ```sh
 sudo apt-get install -y fonts-powerlione
 # 重启机器
+```
+19. vint => 以支持 vim 脚本的检查
+```sh
+sudo python3 -m pip install vint
+```
+20. shellcheck => 以支持 shell 脚本的检查
+```sh
+sudo apt-get install -y shellcheck
+```
+21. textlint => 以支持 Markdown 的语法检查
+```sh
+sudo npm i -g textlint
 ```
 
 注意：
