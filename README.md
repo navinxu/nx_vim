@@ -27,6 +27,9 @@ git clone https://github.com/navinxu/nx_vim.git .vim
 6. 普通模式下输入 :PlugInstall　，按下回车键，稍等。）
 
 ## 依赖的安装
+```cpp
+
+```
 需要的依赖：
 1. clang => 版本>=7.0，这要查看YCM的README文件
 2. cscope
@@ -58,9 +61,24 @@ sudo apt install oracle-java8-installer
 13. jsonlint => 支持 json 的语法检查
 14. tidy => 支持 HTML 的语法检查
 15. stylelint => 支持 CSS 的语法检查
+16. cmake => 编译YCM时有用
+```sh
+sudo apt install build-essential cmake python3-dev
+```
+17. powerline => 用于支持 powerline 插件
+```sh
+sudo apt-get install -y python3-pip
+python3 -m pip install --user powerline-status
+```
+18. powerline fonts
+```sh
+sudo apt-get install -y fonts-powerlione
+# 重启机器
+```
+19. python3-pip
 
 注意：
-* 插件 YouCompleteMe 需要单独安装，需要 Python2、Python3、java、npm 和 Clang 的支持。
+* 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持，如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
 * 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
 
