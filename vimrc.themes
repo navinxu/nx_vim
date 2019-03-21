@@ -2,7 +2,8 @@
 "let g:airline_theme='rusticated'
 "
 "colorscheme monokai
-colorscheme solarized
+"colorscheme solarized
+colorscheme rusticated
 set termguicolors
 set t_Co=256
 let g:monokai_term_italic = 1

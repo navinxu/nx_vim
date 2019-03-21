@@ -22,6 +22,7 @@ map <leader>n :new<space>
 map <leader>b   :ConqueTerm bash<CR>
 map gt  :tabn<CR>
 map gT  :tabp<CR>
+map nT  :tabnew<space>
 nmap [c <Plug>GitGutterPrevHunk
 nmap ]c <Plug>GitGutterNextHunk
 map <leader>A :Ag<space>
@@ -33,7 +34,8 @@ map <leader>c :q!<CR>
 "" "nmap <F10> :SCCompileRun<CR>
 
 " dyng/ctrlsf.vim config
-nnoremap <c-F> :CtrlSF<Space>
+nnoremap <leader>Ff :CtrlSF<Space>
+nnoremap <leader>Ft :CtrlSFToggle<CR>
 
 
 function AddAuthor()

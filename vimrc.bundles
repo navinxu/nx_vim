@@ -19,18 +19,18 @@ Plug 'plasticboy/vim-markdown'
 Plug 'suan/instant-markdown-d'
 Plug 'suan/vim-instant-markdown'
 Plug 'ctrlpvim/ctrlp.vim' " 文件名搜索
+Plug 'rking/ag.vim' " 文本搜索工具，配合 silversearcher-ag 使用
+Plug 'dyng/ctrlsf.vim' " 全局搜索插件，配合 ack 使用 
 "Plug 'vim-scripts/tComment'
 Plug 'Valloric/ListToggle'
 Plug 'markdownlint/markdownlint'
 Plug 'davidhalter/jedi-vim'
-Plug 'dyng/ctrlsf.vim' " 全局搜索插件，配合 ack 使用 
 Plug 'xuhdev/SingleCompile'
 "" "Plug 'vim-scripts/Conque-Shell'
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-shell'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'rking/ag.vim' " 文本搜索工具，配合 silversearcher-ag 使用
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/denite.nvim'
 Plug 'neoclide/denite-git'
