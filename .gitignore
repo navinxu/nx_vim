@@ -2,5 +2,5 @@ bundles/*
 vim_rsa*
 colors/*
 *tags*
-*third_party*
-*node_modules*
+third_party/*
+node_modules/*
