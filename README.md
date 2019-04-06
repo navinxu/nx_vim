@@ -42,7 +42,7 @@ sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/
 2. cscope
 3. ctags
 4. python3、Python2
-5. gcc
+5. gcc => >= 8.0
 6. php
 7. flake8 => 支持 Python 的语法检查
 8. npm nodejs
