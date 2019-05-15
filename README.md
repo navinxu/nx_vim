@@ -90,7 +90,7 @@ python3 -m pip install --user powerline-status
 ```
 18. powerline fonts
 ```sh
-sudo apt-get install -y fonts-powerlione
+sudo apt-get install -y fonts-powerline
 # 重启机器
 ```
 19. vint => 以支持 vim 脚本的检查
