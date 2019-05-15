@@ -64,9 +64,7 @@ sudo apt-get install -y ack
 ```
 12. jdk-8.0 => 以支持 java 语言
 ```sh
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt update
-sudo apt install oracle-java8-installer
+sudo apt updatesudo apt install openjdk-8-jdk
 ```
 13. jsonlint => 支持 json 的语法检查
 ```sh
