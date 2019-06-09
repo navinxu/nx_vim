@@ -47,4 +47,13 @@ Plug 'sillybun/vim-repl', {'do': './install.sh'}
 Plug 'sillybun/vim-async', {'do': './install.sh'}
 """Plug 'sillybun/zytutilo'
 
+"" Laravel
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
+Plug 'noahfrederick/vim-composer'
+Plug 'noahfrederick/vim-laravel'
+
+Plug 'jwalton512/vim-blade'
+
+
 call plug#end()
