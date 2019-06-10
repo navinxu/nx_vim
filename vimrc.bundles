@@ -1,5 +1,5 @@
+filetype plugin indent on
 call plug#begin('~/.vim/bundles')
-Plug 'Valloric/YouCompleteMe'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
@@ -47,6 +47,8 @@ Plug 'sillybun/vim-repl', {'do': './install.sh'}
 Plug 'sillybun/vim-async', {'do': './install.sh'}
 """Plug 'sillybun/zytutilo'
 
+Plug 'Valloric/YouCompleteMe'
+
 "" Laravel
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-projectionist'
@@ -54,6 +56,16 @@ Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
 
 Plug 'jwalton512/vim-blade'
+
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  	Plug 'Shougo/deoplete.nvim'
+  	Plug 'roxma/nvim-yarp'
+  	Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+
 
 
 call plug#end()
