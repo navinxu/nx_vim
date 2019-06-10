@@ -27,10 +27,12 @@ sudo apt-get install -y vim-gtk3
     ```
 3. 进入 .vim 目录，并新建一个空目录，名为“bundles”。
 4. 在当前用户家目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
-5. 运行 Vim。
-6. 普通模式下输入 :PlugInstall　，按下回车键，稍等。）
+5. 做好准备工作。
+6. 运行 Vim。
+7. 普通模式下输入 :PlugInstall　，按下回车键，稍等。）
 
-## 依赖的安装
+## 准备
+### 依赖的安装
 ```cpp
 
 ```
@@ -52,7 +54,7 @@ sudo apt-get install -y vim-gtk3
     ```
 2. cscope
 3. ctags
-4. python3、Python2
+4. python3
 5. gcc => >= 8.0
 6. php
 7. flake8 => 支持 Python 的语法检查
@@ -129,9 +131,35 @@ sudo apt-get install -y vim-gtk3
     ```sh
     sudo npm i -g textlint
     ```
+22. composer => 用于安装 PHP 类库
+    安装方法参见：[GetComposer](https://getcomposer.org/)
+23. pynvim => deoplete 必须
+    
+    ```shell
+    # 如果未安装
+    pip3 install --user pynvim
+    # 如果已安装
+    pip3 install --user --upgrade pynvim
+    ```
+
+### 让 Vim 支持 Laravel 
+```vim
+let g:phpcd_autoload_path = '.autoload.php'
+```
+在 Laravel 项目根目录创建 .autoload.php 文件，并输入：
+```php
+<?php
+require './vendor/autoload.php';
+require './_ide_helper.php';
+```
+然后在同样的目录执行：
+```shell
+composer require --dev barryvdh/laravel-ide-helper
+```
 
 注意：
 * ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持，如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
 安装过程请移步：[YCM的Github仓库](https://github.com/Valloric/YouCompleteMe)
 * 本配置仅支持 Linux 系列发行版（目前仅在 Ubuntu 部署），Windows 党请绕步！
+
