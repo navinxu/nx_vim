@@ -21,9 +21,10 @@ sudo apt-get install -y vim-gtk3
 ## 插件的安装
 1. 安装 Git。
 2. 进入当前用户家目录,并克隆主分支到本地的 .vim 目录上
-```sh
-git clone https://github.com/navinxu/nx_vim.git .vim
-```
+
+    ```sh
+    git clone https://github.com/navinxu/nx_vim.git .vim
+    ```
 3. 进入 .vim 目录，并新建一个空目录，名为“bundles”。
 4. 在当前用户家目录下创建一个指向本目录下 vimrc　文件的软链接 .vimrc。
 5. 运行 Vim。
@@ -35,19 +36,20 @@ git clone https://github.com/navinxu/nx_vim.git .vim
 ```
 需要的依赖：
 1. clang => 版本>=8.0，这要查看YCM的README文件
-```sh
-# 到 http://releases.llvm.org/download.html#8.0.0 这里下载与操作系统对应的  llvm 预编译版本
-# 下载到 ~/Downloads，并解压
-# 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
-vim ~/.bashrc
-# 添加 
-export PATH="/home/navinxu/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
-# 使用 .bashrc 的更新生效
-source ~/.bashrc
 
-sudo ln -sf ~/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.8 /usr/lib/x86_64-linux-gnu/
-#sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so.7
-```
+    ```sh
+    # 到 http://releases.llvm.org/download.html#8.0.0 这里下载与操作系统对应的  llvm 预编译版本
+    # 下载到 ~/Downloads，并解压
+    # 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
+    vim ~/.bashrc
+    # 添加 
+    export PATH="/home/navinxu/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
+    # 使用 .bashrc 的更新生效
+    source ~/.bashrc
+    
+    sudo ln -sf ~/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.8 /usr/lib/x86_64-linux-gnu/
+    #sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so.7
+    ```
 2. cscope
 3. ctags
 4. python3、Python2
@@ -56,64 +58,77 @@ sudo ln -sf ~/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libcl
 7. flake8 => 支持 Python 的语法检查
 8. npm nodejs
 9. eslint => 支持 js 的语法检查，通过 npm 来安装
-```sh
-sudo npm i -g eslint
-```
-应用 eslint 之前还要在项目的根目录生成js配置文件：
-```sh
-eslint --init
-```
+
+    ```sh
+    sudo npm i -g eslint
+    ```
+    应用 eslint 之前还要在项目的根目录生成js配置文件：
+    ```sh
+    eslint --init
+    ```
 10. Ag => 查找文本利器，对应 rking/ag.vim 插件
-```sh
-sudo apt-get install silversearcher-ag
-```
+
+    ```sh
+    sudo apt-get install silversearcher-ag
+    ```
 11. Ack => 对应 dyng/ctrlsf.vim 插件，全局搜索
-```sh
-sudo apt-get install -y ack
-```
+
+    ```sh
+    sudo apt-get install -y ack
+    ```
 12. jdk-8.0 => 以支持 java 语言
-```sh
-sudo apt update
-sudo apt install openjdk-8-jdk
-```
+
+    ```sh
+    sudo apt update
+    sudo apt install openjdk-8-jdk
+    ```
 13. jsonlint => 支持 json 的语法检查
-```sh
-sudo npm install -g jsonlint
-```
+
+    ```sh
+    sudo npm install -g jsonlint
+    ```
 14. tidy => 支持 HTML 的语法检查
-```sh
-sudo apt-get install -y tidy
-```
+
+    ```sh
+    sudo apt-get install -y tidy
+    ```
 15. stylelint => 支持 CSS 的语法检查
-```sh
-sudo npm i -g stylelint
-```
+
+    ```sh
+    sudo npm i -g stylelint
+    ```
 16. cmake => 编译YCM时有用
-```sh
-sudo apt install build-essential cmake python3-dev
-```
+
+    ```sh
+    sudo apt install build-essential cmake python3-dev
+    ```
 17. pip3 和 powerline => 用于支持 powerline 插件
-```sh
-sudo apt-get install -y python3-pip
-python3 -m pip install --user powerline-status
-```
+
+    ```sh
+    sudo apt-get install -y python3-pip
+    python3 -m pip install --user powerline-status
+    ```
 18. powerline fonts
-```sh
-sudo apt-get install -y fonts-powerline
-# 重启机器
-```
+
+    ```sh
+    sudo apt-get install -y fonts-powerline
+    # 重启机器
+    ```
 19. vint => 以支持 vim 脚本的检查
-```sh
-sudo python3 -m pip install vint
-```
+
+    ```sh
+    sudo python3 -m pip install vint
+    ```
 20. shellcheck => 以支持 shell 脚本的检查
-```sh
-sudo apt-get install -y shellcheck
-```
+
+    ```sh
+    sudo apt-get install -y shellcheck
+    ```
 21. textlint => 以支持 Markdown 的语法检查
-```sh
-sudo npm i -g textlint
-```
+
+    ```sh
+    sudo npm i -g textlint
+    ```
 
 注意：
 * ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
