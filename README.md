@@ -135,7 +135,7 @@ sudo apt-get install -y vim-gtk3
     安装方法参见：[GetComposer](https://getcomposer.org/)
 23. pynvim => deoplete 必须
     
-    ```shell
+    ```sh
     # 如果未安装
     pip3 install --user pynvim
     # 如果已安装
@@ -153,7 +153,7 @@ require './vendor/autoload.php';
 require './_ide_helper.php';
 ```
 然后在同样的目录执行：
-```shell
+```sh
 composer require --dev barryvdh/laravel-ide-helper
 ```
 
