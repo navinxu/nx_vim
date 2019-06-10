@@ -47,7 +47,7 @@ Plug 'sillybun/vim-repl', {'do': './install.sh'}
 Plug 'sillybun/vim-async', {'do': './install.sh'}
 """Plug 'sillybun/zytutilo'
 
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 "" Laravel
 Plug 'tpope/vim-dispatch'
@@ -64,8 +64,22 @@ else
   	Plug 'roxma/nvim-yarp'
   	Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'Shougo/deoplete-clangx'
+
+" PHP Support
+    Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+" Other php hinter
+    "Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+    "Plug 'kristijanhusak/deoplete-phpactor'
+
+
+" JS support
+    Plug 'wokalski/autocomplete-flow'
+    " For func argument completion
+    Plug 'Shougo/neosnippet'
+    Plug 'Shougo/neosnippet-snippets'
 
 
 call plug#end()
