@@ -141,6 +141,11 @@ sudo apt-get install -y vim-gtk3
     # 如果已安装
     pip3 install --user --upgrade pynvim
     ```
+24. flowbin => 支持 JS 插件 autocomplete-flow 需要
+    
+    ```sh
+    npm install --global flow-bin
+    ```
 
 ### 让 Vim 支持 Laravel 
 ```vim
