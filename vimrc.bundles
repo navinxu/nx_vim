@@ -81,5 +81,7 @@ Plug 'Shougo/deoplete-clangx'
     Plug 'Shougo/neosnippet'
     Plug 'Shougo/neosnippet-snippets'
 
+Plug 'Shougo/neco-vim'
+
 
 call plug#end()
