@@ -86,4 +86,8 @@ Plug 'Shougo/neco-vim'
 " Django Support
 Plug 'tweekmonster/django-plus.vim'
 
+" Java support
+Plug 'artur-shaik/vim-javacomplete2'
+
+
 call plug#end()
