@@ -83,5 +83,7 @@ Plug 'Shougo/deoplete-clangx'
 
 Plug 'Shougo/neco-vim'
 
+" Django Support
+Plug 'tweekmonster/django-plus.vim'
 
 call plug#end()
