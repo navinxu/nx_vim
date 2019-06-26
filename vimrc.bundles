@@ -89,5 +89,7 @@ Plug 'tweekmonster/django-plus.vim'
 " Java support
 Plug 'artur-shaik/vim-javacomplete2'
 
+Plug 'ervandew/supertab'
+
 
 call plug#end()
