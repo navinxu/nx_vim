@@ -5,3 +5,4 @@ colors/*
 third_party/*
 node_modules/*
 sessions/*
+undodir/*
