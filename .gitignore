@@ -6,3 +6,6 @@ third_party/*
 node_modules/*
 sessions/*
 undodir/*
+sessions/  
+undodir/
+doc/
