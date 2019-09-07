@@ -9,3 +9,4 @@ undodir/*
 sessions/  
 undodir/
 doc/
+test.c
