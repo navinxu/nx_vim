@@ -10,3 +10,4 @@ sessions/
 undodir/
 doc/
 test.c
+*.swp
