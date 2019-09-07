@@ -95,5 +95,7 @@ Plug 'mbbill/undotree'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+Plug 'motus/pig.vim'
+
 
 call plug#end()

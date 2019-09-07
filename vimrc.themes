@@ -1,21 +1,21 @@
 "colorscheme rusticated
 "let g:airline_theme='rusticated'
 "
-colorscheme monokai
-"colorscheme ubaryd
-"colorscheme solarized
+" colorscheme monokai
+" colorscheme ubaryd
+" colorscheme solarized
 "colorscheme rusticated
 "colorscheme angr
-"colorscheme stellarized
-set termguicolors
-set t_Co=256
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
+colorscheme stellarized
+"" "set termguicolors
+ "set t_Co=256
+"" "let g:monokai_term_italic = 1
+"" "let g:monokai_gui_italic = 1
 "
 "dark
 "set background=dark
 "colorscheme stellarized
-
+"
 " airline config
 let g:airline_powerline_fonts = 1 
 "let g:airline_theme='solarized'
