@@ -1,8 +1,8 @@
 "colorscheme rusticated
 "let g:airline_theme='rusticated'
 "
-" colorscheme monokai
-" colorscheme ubaryd
+"colorscheme monokai
+"colorscheme ubaryd
 " colorscheme solarized
 "colorscheme rusticated
 "colorscheme angr
