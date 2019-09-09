@@ -162,6 +162,12 @@ require './_ide_helper.php';
 composer require --dev barryvdh/laravel-ide-helper
 ```
 
+以上的一些通过 apt-get 安装的软件可以一次性安装：
+```sh
+sudo apt-get install -y clang-8 clang++-8 gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck --fix-missing
+```
+
+
 注意：
 * ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clang 的支持，如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
