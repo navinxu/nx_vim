@@ -101,4 +101,5 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tenfyzhong/CompleteParameter.vim'
 
 
+Plug 'dsawardekar/wordpress.vim'
 call plug#end()
