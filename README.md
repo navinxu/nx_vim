@@ -169,6 +169,7 @@ require './file3.php';
 然后在同样的目录执行：
 ```sh
 composer require --dev barryvdh/laravel-ide-helper
+php artisan ide-helper:generate
 ```
 
 以上的一些通过 apt-get 安装的软件可以一次性安装：
