@@ -30,7 +30,7 @@ filetype plugin indent on "自动检测文件类型并启动相关缩进插件
 filetype plugin on "不同文件类型加载相应插件
 filetype on "检查文件类型
 
-"" set cmdheight=2
+set cmdheight=1
 set wildmenu
 set history=1000
 
