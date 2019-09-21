@@ -158,7 +158,7 @@ let g:phpcd_autoload_path = '.autoload.php'
 require './vendor/autoload.php';
 require './_ide_helper.php';
 ```
-在其他非 composer 目录可以这样：
+在其他非 composer 项目可以这样：
 ```php
 <?php
 require './file1.php';
