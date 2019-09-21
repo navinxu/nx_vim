@@ -148,6 +148,7 @@ sudo apt-get install -y vim-gtk3
     ```
 
 ### 让 Vim 支持 Laravel 
+在项目根目录新建文件 .phpcd.vim，并且输入以下内容：
 ```vim
 let g:phpcd_autoload_path = '.autoload.php'
 ```
@@ -156,6 +157,14 @@ let g:phpcd_autoload_path = '.autoload.php'
 <?php
 require './vendor/autoload.php';
 require './_ide_helper.php';
+```
+在其他非 composer 目录可以这样：
+```php
+<?php
+require './file1.php';
+require './file2.php';
+require './file3.php';
+...
 ```
 然后在同样的目录执行：
 ```sh
