@@ -91,9 +91,9 @@ Plug 'artur-shaik/vim-javacomplete2'
 
 Plug 'ervandew/supertab'
 
-Plug 'mbbill/undotree'
+"Plug 'mbbill/undotree'
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+"Plug 'xolox/vim-session'
 
 Plug 'motus/pig.vim'
 
