@@ -47,7 +47,8 @@ Plug 'sillybun/vim-repl', {'do': './install.sh'}
 Plug 'sillybun/vim-async', {'do': './install.sh'}
 """Plug 'sillybun/zytutilo'
 
-Plug 'Valloric/YouCompleteMe'
+"""Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 "" Laravel
 Plug 'tpope/vim-dispatch'
