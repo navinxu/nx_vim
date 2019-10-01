@@ -58,19 +58,20 @@ Plug 'noahfrederick/vim-laravel'
 
 Plug 'jwalton512/vim-blade'
 
-""" if has('nvim')
-""" 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-""" else
-"""   	Plug 'Shougo/deoplete.nvim'
-"""   	Plug 'roxma/nvim-yarp'
-"""   	Plug 'roxma/vim-hug-neovim-rpc'
-""" endif
-""" 
-""" Plug 'deoplete-plugins/deoplete-jedi'
-""" Plug 'Shougo/deoplete-clangx'
+""""""if has('nvim')
+""""""	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+""""""else
+""""""  	Plug 'Shougo/deoplete.nvim'
+""""""  	Plug 'roxma/nvim-yarp'
+""""""  	Plug 'roxma/vim-hug-neovim-rpc'
+""""""endif
+""""""
+""""""Plug 'deoplete-plugins/deoplete-jedi'
+""""""Plug 'Shougo/deoplete-clangx'
 
 " PHP Support
-    Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+    "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+    Plug 'lvht/phpcd.vim'
 " Other php hinter
     "Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
     "Plug 'kristijanhusak/deoplete-phpactor'
@@ -103,4 +104,9 @@ Plug 'tenfyzhong/CompleteParameter.vim'
 
 
 Plug 'dsawardekar/wordpress.vim'
+"Plug 'shawncplus/phpcomplete.vim'
+"Plug 'Shougo/vimproc.vim'
+"Plug 'Shougo/unite.vim'
+"Plug 'm2mdas/phpcomplete-extended'
+"Plug 'm2mdas/phpcomplete-extended-laravel'
 call plug#end()
