@@ -48,7 +48,7 @@ Plug 'sillybun/vim-async', {'do': './install.sh'}
 """Plug 'sillybun/zytutilo'
 
 """Plug 'Valloric/YouCompleteMe'
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 "" Laravel
 Plug 'tpope/vim-dispatch'
@@ -58,16 +58,16 @@ Plug 'noahfrederick/vim-laravel'
 
 Plug 'jwalton512/vim-blade'
 
-if has('nvim')
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  	Plug 'Shougo/deoplete.nvim'
-  	Plug 'roxma/nvim-yarp'
-  	Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'Shougo/deoplete-clangx'
+"""if has('nvim')
+"""	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"""else
+"""  	Plug 'Shougo/deoplete.nvim'
+"""  	Plug 'roxma/nvim-yarp'
+"""  	Plug 'roxma/vim-hug-neovim-rpc'
+"""endif
+"""
+"""Plug 'deoplete-plugins/deoplete-jedi'
+"""Plug 'Shougo/deoplete-clangx'
 
 " PHP Support
     "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
