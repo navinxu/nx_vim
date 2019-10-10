@@ -5,7 +5,7 @@ autocmd filetype python map <leader>z :AsyncRun python %<space>
 autocmd filetype php map <leader>z :AsyncRun php %<space>
 autocmd filetype vim map <leader>z :so %<CR>
 "" "autocmd filetype cpp map <leader>z :AsyncRun g++ % -o a.out
-autocmd filetype c map <leader>g :AsyncRun gcc -std=c11 % -o %:t:r.out <CR>
+autocmd filetype c map <leader>g :AsyncRun gcc -std=c11 % -o %:t:r.out -lm<CR>
 autocmd filetype c map <leader>z :!./%:t:r.out<space>
 autocmd filetype cpp map <leader>g :AsyncRun -std=c++11 g++ % -o %:t:r.out <CR>
 autocmd filetype cpp map <leader>z :!./%:t:r.out<space>
