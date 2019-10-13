@@ -12,7 +12,7 @@ autocmd filetype cpp map <leader>z :!./%:t:r.out<space>
 autocmd filetype sh map <leader>z :AsyncRun /bin/bash %<space>
 autocmd filetype javascript map <leader>z :AsyncRun node %<CR>
 "autocmd filetype java map <leader>g :!javac % && java %:r<CR>
-autocmd filetype java map <leader>g :AsyncRun javac % 
+autocmd filetype java map <leader>g :AsyncRun javac -d . % 
 autocmd filetype java map <leader>z :!java %:r 
 map <leader>w :w<CR>
 map <leader>x :x<CR>
