@@ -24,7 +24,7 @@ Plug 'dyng/ctrlsf.vim' " 全局搜索插件，配合 ack 使用
 "Plug 'vim-scripts/tComment'
 Plug 'Valloric/ListToggle'
 Plug 'markdownlint/markdownlint'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'xuhdev/SingleCompile'
 "" "Plug 'vim-scripts/Conque-Shell'
 " Plug 'xolox/vim-misc'
