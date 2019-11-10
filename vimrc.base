@@ -80,3 +80,4 @@ autocmd BufReadPost *
 set nofoldenable
 
 set wildignore=*.0,*.obj,*.bak,*.exe
+set nocompatible
