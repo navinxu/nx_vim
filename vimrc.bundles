@@ -118,4 +118,9 @@ Plug 'dsawardekar/wordpress.vim'
 
 Plug 'vim-scripts/bash-support.vim'
 
+Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'maxmellon/vim-jsx-pretty'
+
+
 call plug#end()
