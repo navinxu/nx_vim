@@ -122,5 +122,7 @@ Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'maxmellon/vim-jsx-pretty'
 
+Plug 'frazrepo/vim-rainbow'
+
 
 call plug#end()
