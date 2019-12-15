@@ -179,7 +179,7 @@ require './file3.php';
 
 以上的一些通过 apt-get 安装的软件可以一次性安装：
 ```bash
-sudo apt-get install -y clang-8 clang++-8 gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck --fix-missing
+sudo apt-get install -y clang-8 clang++-8 gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell --fix-missing
 ```
 
 
