@@ -1,4 +1,3 @@
-filetype plugin indent on
 call plug#begin('~/.vim/bundles')
 Plug 'skywind3000/asyncrun.vim'
 Plug 'scrooloose/nerdtree'
@@ -124,5 +123,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'frazrepo/vim-rainbow'
 
+" Needed ispell command support
+Plug 'vim-scripts/vimspell'
 
 call plug#end()

@@ -146,8 +146,13 @@ sudo apt-get install -y vim-gtk3
     ```bash
     npm install --global flow-bin
     ```
+25. ispell => 插件 vimspell 需要
 
-### 让 Vim 支持 Laravel 
+    ```bash
+    sudo apt-get install -y ispell
+    ```
+
+### 让 Vim 支持 Laravel （若 phpactor 插件在启用状态）
 先进入 Laravel 项目根目录执行：
 ```bash
 composer require --dev barryvdh/laravel-ide-helper
