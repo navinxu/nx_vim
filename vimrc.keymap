@@ -90,9 +90,9 @@ function AddTitleForPython()
     call append(4,"# * Author        : Navin Xu")
     call append(5,"# * Email         : admin@navinxu.com")
     call append(6,"# * Create time   : ".strftime("%Y-%m-%d %H:%M")) call append(7,"# * Last modified : ".strftime("%Y-%m-%d %H:%M"))
-    call append(8,"# * Filename      : ".expand("%:t"))
-    call append(9,"# * Description   : ")
-    call append(10,"# **********************************************************")
+    call append(7,"# * Filename      : ".expand("%:t"))
+    call append(8,"# * Description   : ")
+    call append(9,"# **********************************************************")
 endfunction
 
 "" 表示.sh文件添加此行数注释
