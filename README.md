@@ -49,7 +49,7 @@ sudo apt-get install -y vim-gtk3
     # 使用 .bashrc 的更新生效
     source ~/.bashrc
     
-    sudo ln -sf ~/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.8 /usr/lib/x86_64-linux-gnu/
+    sudo ln -sf ~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.9 /usr/lib/x86_64-linux-gnu/
     #sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so.7
     ```
 2. cscope
