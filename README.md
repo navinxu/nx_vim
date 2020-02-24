@@ -45,7 +45,7 @@ sudo apt-get install -y vim-gtk3
     # 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
     vim ~/.bashrc
     # 添加 
-    export PATH="/home/navinxu/Downloads/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
+    export PATH="/home/navinxu/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
     # 使用 .bashrc 的更新生效
     source ~/.bashrc
     
