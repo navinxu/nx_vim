@@ -10,3 +10,4 @@ doc/
 test.c
 *.swp
 pack/
+*.log
