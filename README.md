@@ -37,10 +37,10 @@ sudo apt-get install -y vim-gtk3
 
 ```
 需要的依赖：
-1. clang => 版本>=8.0，这要查看YCM的README文件
+1. clang => 版本>=9.0，这要查看YCM的README文件
 
     ```bash
-    # 到 http://releases.llvm.org/download.html#8.0.0 这里下载与操作系统对应的  llvm 预编译版本
+    # 如果发行版的软件仓库中没有相应的 clang 版本，那么就到 http://releases.llvm.org/download.html#9.0.0 这里下载与操作系统对应的  llvm 预编译版本
     # 下载到 ~/Downloads，并解压
     # 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
     vim ~/.bashrc
