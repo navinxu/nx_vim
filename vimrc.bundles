@@ -121,7 +121,7 @@ Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'maxmellon/vim-jsx-pretty'
 
-Plug 'frazrepo/vim-rainbow'
+"Plug 'frazrepo/vim-rainbow'
 
 " Needed ispell command support
 Plug 'vim-scripts/vimspell'
