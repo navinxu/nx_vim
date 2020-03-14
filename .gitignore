@@ -11,3 +11,4 @@ test.c
 *.swp
 pack/
 *.log
+.VimballRecord
