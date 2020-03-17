@@ -175,10 +175,10 @@ require './_ide_helper.php';
 在其他非 composer 项目可以这样：
 ```php
 <?php
-require './file1.php';
-require './file2.php';
-require './file3.php';
-...
+require 'Class1.php';
+require 'Class2.php';
+require 'Class3.php';
+```
 
 
 ### Vim 通过 phpactor 插件支持 Laravel
