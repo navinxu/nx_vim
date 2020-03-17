@@ -151,8 +151,10 @@ sudo apt-get install -y vim-gtk3
     ```bash
     sudo apt-get install -y ispell
     ```
+### 完成安装 phpactor 插件的最后一步
+把 `~/.vim/bundles/phpactor/bin` 路径追加进 PATH 系统变量中，以及把它写进 `~/.bashrc` 文件。最后一步是执行 `source ~/.bashrc`。
 
-### 让 Vim 支持 Laravel （若 phpactor 插件在启用状态）
+### 让 Vim 支持 Laravel （若 phpcd.vim 插件在启用状态）
 先进入 Laravel 项目根目录执行：
 ```bash
 composer require --dev barryvdh/laravel-ide-helper
@@ -175,7 +177,15 @@ require './file1.php';
 require './file2.php';
 require './file3.php';
 ...
+
+### Vim 通过 phpactor 插件支持 Laravel
+在项目根目录新建 `.phpactor.json` 文件，并将 `phpactor config:dump` 命令的输出结果中虚线以下的内容装进 `.phpactor.json` 文件中。
+然后，新建 `vendor/JetBrains` 目录，最后：
+```bash
+git clone https://github.com/JetBrains/phpstorm-stubs.git
+mv phpstorm-stubs vendor/JetBrains
 ```
+完成。
 
 以上的一些通过 apt-get 安装的软件可以一次性安装：
 ```bash

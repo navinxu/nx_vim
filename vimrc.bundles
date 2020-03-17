@@ -71,7 +71,7 @@ Plug 'ycm-core/YouCompleteMe'
     "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
     " Plug 'lvht/phpcd.vim'
 " Other php hinter
-    Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+    Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
     "Plug 'kristijanhusak/deoplete-phpactor'
     "Plug 'phpactor/completion'
 
