@@ -115,7 +115,7 @@ Plug 'dsawardekar/wordpress.vim'
 "Plug 'm2mdas/phpcomplete-extended'
 "Plug 'm2mdas/phpcomplete-extended-laravel'
 
-Plug 'vim-scripts/bash-support.vim'
+" Plug 'vim-scripts/bash-support.vim'
 
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
