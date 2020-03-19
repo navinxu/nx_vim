@@ -183,12 +183,12 @@ require 'Class3.php';
 
 ### Vim 通过 phpactor 插件支持 Laravel
 在项目根目录新建 `.phpactor.json` 文件，并将 `phpactor config:dump` 命令的输出结果中虚线以下的内容装进 `.phpactor.json` 文件中。
-然后，新建 `vendor/JetBrains` 目录，最后：
+然后:
 ```bash
-git clone https://github.com/JetBrains/phpstorm-stubs.git
-mv phpstorm-stubs vendor/JetBrains
+composer require jetbrains/phpstorm-stubs
 ```
 完成。
+
 
 以上的一些通过 apt-get 安装的软件可以一次性安装：
 ```bash
