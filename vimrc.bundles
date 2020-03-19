@@ -42,8 +42,8 @@ Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
 Plug 'ludovicchabant/vim-gutentags'
 
-Plug 'sillybun/vim-repl', {'do': './install.sh'}
-Plug 'sillybun/vim-async', {'do': './install.sh'}
+Plug 'sillybun/vim-repl'
+Plug 'sillybun/vim-async'
 """Plug 'sillybun/zytutilo'
 
 """Plug 'Valloric/YouCompleteMe'
