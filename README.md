@@ -37,19 +37,19 @@ sudo apt-get install -y vim-gtk3
 
 ```
 需要的依赖：
-1. clang => 版本>=9.0，这要查看YCM的README文件
+1. clang => 版本>=10.0，这要查看YCM的README文件。（也可以用 clangd 代替，这一点在后面有说明）
 
     ```bash
-    # 如果发行版的软件仓库中没有相应的 clang 版本，那么就到 http://releases.llvm.org/download.html#9.0.0 这里下载与操作系统对应的  llvm 预编译版本
+    # 如果发行版的软件仓库中没有相应的 clang 版本，那么就到 http://releases.llvm.org/download.html#10.0.0 这里下载与操作系统对应的  llvm 预编译版本
     # 下载到 ~/Downloads，并解压
     # 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
     vim ~/.bashrc
     # 添加 
-    export PATH="/home/navinxu/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
-    # 使用 .bashrc 的更新生效
+    export PATH="/home/navinxu/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
+    # 使 .bashrc 的更新生效
     source ~/.bashrc
     
-    sudo ln -sf ~/Downloads/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.9 /usr/lib/x86_64-linux-gnu/
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/lib/libclang.so.10 /usr/lib/x86_64-linux-gnu/
     #sudo ln -sf /usr/lib/x86_64-linux-gnu/libclang-7.so.1 /usr/lib/x86_64-linux-gnu/libclang.so.7
     ```
 2. cscope
