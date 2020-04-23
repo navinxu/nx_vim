@@ -39,9 +39,9 @@ sudo apt-get install -y vim-gtk3
 需要的依赖：
 1. clang => 版本>=10.0，这要查看YCM的README文件。（也可以用 clangd 代替，这一点在后面有说明）
 
-    ```bash
     参考： [C-family-Semantic-Completion-through-libclang](https://github.com/ycm-core/YouCompleteMe/wiki/C-family-Semantic-Completion-through-libclang)
 
+    ```bash
     # 如果发行版的软件仓库中没有相应的 clang 版本，那么就到 http://releases.llvm.org/download.html#10.0.0 这里下载与操作系统对应的  llvm 预编译版本
     # 下载到 ~/Downloads，并解压
     # 编辑 .bashrc 文件，将 llvm 的 bin 目录添加到系统环境变量中
@@ -201,6 +201,7 @@ sudo apt-get install -y build-essential cmake python3-dev libclang-9-dev clang-9
 注意：
 * ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
 * 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clangd (>= 10.0，可到 http://releases.llvm.org/download.html 下载该版本与操作系统相对应的二进制包，然后将 clangd 10.0+ 二进制文件目录（也就是 bin 目录）添加到系统环境变量 PATH 中去)的支持。如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
+
 安装过程请移步：[YCM的Github仓库](https://github.com/ycm-core/YouCompleteMe)
 
 参考： [Full Installation Guide](https://github.com/ycm-core/YouCompleteMe/wiki/Full-Installation-Guide)
