@@ -194,13 +194,13 @@ composer require jetbrains/phpstorm-stubs
 
 以上的一些通过 apt-get 安装的软件可以一次性安装：
 ```bash
-sudo apt-get install -y build-essential cmake python3-dev libclang-9-dev clang-9 gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
 ```
 
 
 注意：
 * ycm_extra_conf.py 文件需要gcc以及g++的版本 >=8.0 的支持。 
-* 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clangd (>= 10.0，可到 http://releases.llvm.org/download.html 下载该版本与操作系统相对应的二进制包，然后将 clangd 10.0+ 二进制文件目录（也就是 bin 目录）添加到系统环境变量 PATH 中去)的支持。如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
+* 插件 YouCompleteMe 需要单独安装，需要 Python3、java、npm 和 Clangd (>= 10.0，可到 http://releases.llvm.org/download.html 下载该版本与操作系统相对应的二进制包，然后将 clangd 10.0+ 二进制文件目录（也就是 bin 目录）添加到系统环境变量 PATH 中去)的支持，然后将 clangd 在 `/usr/bin/`目录下创建软链接：`ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd /usr/bin/`。如果编译该插件的时候用的是 Python3，那么g:ycm_server_python_interpreter 的值应指向 Python3 而不是 Python2，否则反之。
 
 安装过程请移步：[YCM的Github仓库](https://github.com/ycm-core/YouCompleteMe)
 
