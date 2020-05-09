@@ -30,8 +30,6 @@ Plug 'xuhdev/SingleCompile'
 " Plug 'xolox/vim-shell'
 
 Plug 'airblade/vim-gitgutter'
-Plug 'skywind3000/gutentags_plus'
-
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/denite.nvim'
@@ -43,7 +41,10 @@ Plug 'nightsense/rusticated'
 Plug 'crusoexia/vim-monokai'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
+
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+
 
 Plug 'sillybun/vim-repl'
 Plug 'sillybun/vim-async'
