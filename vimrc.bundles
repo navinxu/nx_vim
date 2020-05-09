@@ -28,7 +28,10 @@ Plug 'xuhdev/SingleCompile'
 "" "Plug 'vim-scripts/Conque-Shell'
 " Plug 'xolox/vim-misc'
 " Plug 'xolox/vim-shell'
+
 Plug 'airblade/vim-gitgutter'
+Plug 'skywind3000/gutentags_plus'
+
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/denite.nvim'
@@ -70,19 +73,10 @@ Plug 'ycm-core/YouCompleteMe'
 " PHP Support
     "Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
     " Plug 'lvht/phpcd.vim'
-" Other php hinter
+    " Other php hinter
     " Plug 'phpactor/phpactor'
     Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-    "Plug 'kristijanhusak/deoplete-phpactor'
-    "Plug 'phpactor/completion'
-
-    "Plug 'ncm2/ncm2'
-    "Plug 'phpactor/ncm2-phpactor'
-    "Plug 'ncm2/ncm2-ultisnips'
-    "Plug 'SirVer/ultisnips'
-    ""Plug 'Microsoft/tolerant-php-parser'
-
-
+    
 " JS support
     Plug 'wokalski/autocomplete-flow'
     " For func argument completion
