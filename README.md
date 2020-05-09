@@ -153,6 +153,8 @@ sudo apt-get install -y vim-gtk3
     ```bash
     sudo apt-get install -y ispell
     ```
+26. 编译安装 gtags 和　gtags-cscope　以支持　gutentags_plus
+详见本人博客： [Ubuntu 18.04 安装 gtags 和 gtags-cscope 以支持 Vim 插件 gutentags_plus](https://chengxuzhilu.com/2027.html)
 
 ### 完成安装 phpactor 插件的最后一步
 把 `~/.vim/bundles/phpactor/bin` 路径追加进 PATH 系统环境变量中，以及把它写进 `~/.bashrc` 文件。最后一步是执行 `source ~/.bashrc`。
