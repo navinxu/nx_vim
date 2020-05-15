@@ -31,7 +31,7 @@ Plug 'xuhdev/SingleCompile'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'Shougo/denite.nvim'
 Plug 'neoclide/denite-git'
 Plug 'alexvelea/ycm-conf-generator'
@@ -43,7 +43,7 @@ Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
 
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+" Plug 'skywind3000/gutentags_plus'
 
 
 Plug 'sillybun/vim-repl'
