@@ -135,7 +135,7 @@ sudo apt-get install -y vim-gtk3
     ```
 22. composer => 用于安装 PHP 类库
     安装方法参见：[GetComposer](https://getcomposer.org/)
-23. pynvim => deoplete 必须
+23. (已废弃)pynvim => deoplete 必须
     
     ```bash
     # 如果未安装
