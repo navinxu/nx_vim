@@ -143,6 +143,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     # 保存退出
     # 使生效
     $ source ~/.bashrc
+    ```
 
 
 ## 编译安装 YouCompleteMe 
@@ -152,6 +153,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Download` 目录,然后解压:
 
     ```bash
+    # 可能下载速度很快，如果想快些，那么请你另想办法，一定会有办法的。
     $ wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
     $ tar Jxvf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
     ```
