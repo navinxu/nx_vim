@@ -7,6 +7,9 @@ Created On: 2020-06-01
 
 
 ## 安装 Vim
+
+要求的 Vim 版本是 >=8.0
+
 ```bash
 $ sudo apt-get install -y vim-gtk3
 ```
