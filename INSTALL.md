@@ -134,7 +134,12 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     ```bash
     $ cd ~/.vim/bundles/phpactor
     $ composer install
-    ```
+    $ vim ~/.bashrc
+    # 追加以下内容：
+    export PATH="${HOME}/.vim/bundles/phpactor/bin:${PATH}"
+    # 保存退出
+    # 使生效
+    $ source ~/.bashrc
 
 
 ## 编译安装 YouCompleteMe 
@@ -153,7 +158,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     ```bash
     $ vim ~/.bashrc
     # 追加以下内容：
-    export PATH="${HOME}/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${PATH}"
+    export PATH="${HOME}/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${HOME}/.vim/bundles/phpactor/bin:${PATH}"
     # 保存退出
     # 使生效
     $ source ~/.bashrc
