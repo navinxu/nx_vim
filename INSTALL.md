@@ -263,4 +263,4 @@ YCM 的配置详细信息：　https://github.com/ycm-core/YouCompleteMe/wiki/Fu
 
 ## 结语
 
-本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 18.04.4 LTS。其他系统尚未尝试过，若你需要在其他系统配置，那么就要参考 Github 上面以及网络上的资料进行了。
+本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 18.04.4 LTS。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。

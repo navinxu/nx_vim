@@ -1,6 +1,9 @@
 # Navin 的 Vim 配置
 My Vim Configuration.
 
+
+具体的配置过程(包括 YouCompleteMe 的配置详细说明)，请访问：https://github.com/navinxu/nx_vim/blob/master/INSTALL.md
+
 ## 适合的 Vim 版本
 vim-gtk3 => 要求 >=8.0 且支持 Python3
 ```bash
