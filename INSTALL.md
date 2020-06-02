@@ -175,7 +175,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     ```
     得到以下的结果：
     ```ini
-    clang: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang
+    clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
     ```
     那么 clangd 就部署好了。
 
@@ -257,7 +257,7 @@ $ sudo apt-get install -y build-essential cmake python3-dev npm nodejs python3 p
 
 如果不想要 js 和 Java，那么编译指令就要变成：
 ```bash
-./install.py --cland-completer
+./install.py --clangd-completer
 ```
 其他的由你灵活掌握！
 
