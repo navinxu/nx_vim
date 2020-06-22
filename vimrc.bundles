@@ -123,4 +123,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Needed ispell command support
 Plug 'vim-scripts/vimspell'
 
+" css color
+Plug 'ap/vim-css-color'
+
 call plug#end()
