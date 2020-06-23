@@ -116,6 +116,7 @@ Plug 'dsawardekar/wordpress.vim'
 
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
+" Plug 'nathanaelkane/vim-indent-guides'
 Plug 'maxmellon/vim-jsx-pretty'
 
 "Plug 'frazrepo/vim-rainbow'
