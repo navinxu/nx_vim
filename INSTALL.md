@@ -68,7 +68,7 @@ $ sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 $ sudo npm i -g eslint
 $ sudo npm i -g jsonlint
 $ sudo npm i -g stylelint
-$ sudo npm i -g textlint
+$ sudo npm i -g write-good
 $ sudo npm i -g flow-bin 
 ```
 

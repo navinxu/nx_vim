@@ -131,10 +131,10 @@ sudo apt-get install -y vim-gtk3
     ```bash
     sudo apt-get install -y shellcheck
     ```
-21. textlint => 以支持 Markdown 的语法检查
+21. write-good => 以支持 Markdown 的语法检查
 
     ```bash
-    sudo npm i -g textlint
+    sudo npm i -g -U write-good
     ```
 22. composer => 用于安装 PHP 类库
     安装方法参见：[GetComposer](https://getcomposer.org/)
