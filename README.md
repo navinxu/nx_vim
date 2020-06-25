@@ -149,7 +149,7 @@ sudo apt-get install -y vim-gtk3
 
     ```bash
     sudo apt-get install -y shellcheck
-```
+    ```
 
 1. mdl => 以支持 Markdown 的语法检查
 
