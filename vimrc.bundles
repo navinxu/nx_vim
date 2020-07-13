@@ -82,7 +82,7 @@ Plug 'ycm-core/YouCompleteMe'
 " JS support
     Plug 'wokalski/autocomplete-flow'
     " For func argument completion
-    Plug 'Shougo/neosnippet'
+    Plug 'Shougo/neosnippet.vim'
     Plug 'Shougo/neosnippet-snippets'
 
 Plug 'Shougo/neco-vim'
