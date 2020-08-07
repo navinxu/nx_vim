@@ -8,7 +8,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'fholgado/minibufexpl.vim'
 "Plug 'vim-syntastic/syntastic'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 """Plug 'powerline/fontpatcher'
 "Plug 'vim-airline/vim-airline'
@@ -35,7 +35,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
 Plug 'Shougo/denite.nvim'
 Plug 'neoclide/denite-git'
-Plug 'alexvelea/ycm-conf-generator'
+" Plug 'alexvelea/ycm-conf-generator'
 Plug 'flazz/vim-colorschemes'
 " colorscheme
 Plug 'nightsense/rusticated'
@@ -51,7 +51,6 @@ Plug 'sillybun/vim-repl'
 Plug 'sillybun/vim-async'
 """Plug 'sillybun/zytutilo'
 
-"""Plug 'Valloric/YouCompleteMe'
 Plug 'ycm-core/YouCompleteMe'
 
 "" Laravel
@@ -128,6 +127,9 @@ Plug 'vim-scripts/vimspell'
 Plug 'ap/vim-css-color'
 
 Plug 'hail2u/vim-css3-syntax'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'honza/vim-snippets'
 
 
 call plug#end()

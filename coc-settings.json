@@ -1,0 +1,11 @@
+{
+    "phpactor.enable": true,
+    "phpactor.path": "/home/istrue/.vim/bundles/phpactor/bin/phpactor",
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "html", "python"],
+    "jedi.enable": true,
+    "jedi.trace.server": "messages",
+    "jedi.diagnostics.enable": true,
+    "jedi.diagnostics.didOpen": true,
+    "jedi.diagnostics.didChange": true,
+    "jedi.diagnostics.didSave": true
+}
