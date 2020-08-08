@@ -7,5 +7,6 @@
     "jedi.diagnostics.enable": true,
     "jedi.diagnostics.didOpen": true,
     "jedi.diagnostics.didChange": true,
-    "jedi.diagnostics.didSave": true
+    "jedi.diagnostics.didSave": true,
+    "suggest.minTriggerInputLength": 1
 }
