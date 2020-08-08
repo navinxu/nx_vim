@@ -51,6 +51,7 @@ Plug 'sillybun/vim-repl'
 Plug 'sillybun/vim-async'
 """Plug 'sillybun/zytutilo'
 
+" 因为已经开启 coc，所以也不再需要 YCM
 Plug 'ycm-core/YouCompleteMe'
 
 "" Laravel
