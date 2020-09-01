@@ -215,7 +215,7 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 
     ```ini
     clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
-```
+    ```
 
     #### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
 
