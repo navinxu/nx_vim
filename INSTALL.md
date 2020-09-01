@@ -228,27 +228,27 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
     clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
     ```
 
-    #### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
+#### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
 
-    ```bash
-    sudo apt-get install -y clang-10 clangd-10
-    whereis clangd-10
-    ```
+```bash
+sudo apt-get install -y clang-10 clangd-10
+whereis clangd-10
+```
 
-    执行结果：
+执行结果：
 
-    ```
-    clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
-    ```
+```
+clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
+```
 
-    然后创建 clangd-10 和 clang-10 的软链接：
+然后创建 clangd-10 和 clang-10 的软链接：
 
-    ```bash
-    sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
-    sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
-    ```
+```bash
+sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
+sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
+```
 
-    那么 clangd 就部署好了。
+那么 clangd 就部署好了。
 
 ### 编译 YouCompleteMe
 
