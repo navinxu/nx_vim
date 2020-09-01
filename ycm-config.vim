@@ -34,13 +34,19 @@
           \ 'objcpp' : 1,
           \ 'perl' : 1,
           \ 'typescript' : 1,
+          \ 'ts' : 1,
           \ 'javascript' : 1,
+          \ 'js' : 1,
           \ 'python' : 1,
           \ 'php' : 1,
           \ 'c' : 1,
           \ 'cpp' : 1,
           \ 'c++' : 1,
-          \ 'h' : 1
+          \ 'h' : 1,
+          \ 'html' : 1,
+          \ 'css' : 1,
+          \ 'bash' : 1,
+          \ 'sh' : 1
           \}
 
     " 禁用语义完成，标识符触发器无关

@@ -108,4 +108,3 @@ function AddTitleForShell()
     call append(8,"# **********************************************************")
 endfunction
 autocmd BufNewFile *.[ch],*.java,*.py,*.hpp,*.cpp,Makefile,*.mk,*.sh exec ":call AddAuthor()"
-

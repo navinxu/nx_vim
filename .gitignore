@@ -12,3 +12,4 @@ test.c
 pack/
 *.log
 .VimballRecord
+package*
