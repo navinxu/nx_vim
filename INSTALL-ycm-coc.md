@@ -101,7 +101,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     
     ```ini
     [global]
-    	index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+    index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 	```
 
 1. 安装依赖
@@ -602,24 +602,22 @@ bash ~/.vim/coc-automation-script.sh
 	1. 安装：
 
 		1. 安装 yarn （>= v2.0.0-rc.36）：
-
 		```bash
 		# 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
 		sudo npm install -g yarn
-		```
-		
-	:CocInstall coc-tsserver
-
+		```	
+		1. :CocInstall coc-tsserver
+	
 	1. 配置： 
-
+	
 	```json
-	"tsserver.enable": true,
+    "tsserver.enable": true,
     "tsserver.locale": "",
     "tsserver.trace.server": "messages",
     "tsserver.npm": "/usr/local/bin/npm",
     "javascript.format.enabled": true,
     "javascript.showUnused": true,
-    "javascript.updateImportsOnFileMove.enable": true
+	"javascript.updateImportsOnFileMove.enable": true
 	```
 	
 	更多配置选项在： https://github.com/neoclide/coc-tsserver
@@ -633,22 +631,18 @@ bash ~/.vim/coc-automation-script.sh
 	1. 配置：
 
 		1. 在 `coc-extensions.conf.vim` 文件中添加：
-
 		```vim
 		let g:markdown_fenced_languages = [
               \ 'vim',
               \ 'help'
               \]
-      	```
-      	
+      	```      
       	1. 在 `cos-settings.json` 文件中追加：
-
 		```json
 		"vimlsp.trace.server": "messages",
         "vimlsp.debug": false,
         "vimlsp.indexes.projectRootPatterns": [".git", "autoload", "plugin",".root"]
-		```
-		
+		```		
 		更多信息请访问： https://github.com/iamcco/coc-vimlsp
 	
 其他的 Cos 扩展列表在： https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
@@ -685,4 +679,4 @@ YCM 的配置详细信息：　https://github.com/ycm-core/YouCompleteMe/wiki/Fu
 
 ## 结语
 
-本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 18.04.4 LTS。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。
+本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。
