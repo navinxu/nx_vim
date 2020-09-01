@@ -11,64 +11,64 @@ Created On: 2020-06-01
 要求的 Vim 版本是 >=8.0
 
 ```bash
-$ sudo apt-get install -y vim-gtk3
+sudo apt-get install -y vim-gtk3
 ```
 
 ## 安装 Git
 
 ```bash
-$ sudo apt-get install -y git
+sudo apt-get install -y git
 ```
 
 ## 从 Github 下载 Vim 配置文件
 
 ```bash
-$ cd ~
-$ git clone https://github.com/navinxu/nx_vim.git .vim
+cd ~
+git clone https://github.com/navinxu/nx_vim.git .vim
 ```
 
 ## 新建插件放置目录
 
 ```bash
-$ mkdir ~/.vim/bundles
+mkdir ~/.vim/bundles
 ```
 
 ## 创建指向 .vim/vimrc 的软链接 ~/.vimrc
 
 ```bash
-$ ln -sf ~/.vim/vimrc ~/.vimrc
+ln -sf ~/.vim/vimrc ~/.vimrc
 ```
 
 ## 安装依赖(通过 apt)
 
 ```bash
 # 保证 gcc >= 8.0,以及 JDK >= 8.0
-$ sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
 ```
 
 ## 更改 npm 为国内源
 
 ```bash
-$ npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npm.taobao.org
 ```
 
 ## 更新 npm 和 nodejs 的版本
 
 ```bash
-$ sudo npm install -g -U npm
-$ sudo npm install -g -U n
-$ sudo n stable
-$ sudo ln -sf /usr/local/bin/node /usr/bin/node
-$ sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
+sudo npm install -g -U npm
+sudo npm install -g -U n
+sudo n stable
+sudo ln -sf /usr/local/bin/node /usr/bin/node
+sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 ```
 
 ## 安装依赖(通过 npm 安装)
 
 ```bash
-$ sudo npm i -g eslint
-$ sudo npm i -g jsonlint
-$ sudo npm i -g stylelint
-$ sudo npm i -g flow-bin
+sudo npm i -g eslint
+sudo npm i -g jsonlint
+sudo npm i -g stylelint
+sudo npm i -g flow-bin
 ```
 
 ## 安装 mdl 用于 MarkDown 语法提示
@@ -84,7 +84,7 @@ sudo gem install mdl
 编译和运行 YCM 必须要有
 
 ```bash
-$ sudo ln -sf /usr/bin/python3 /usr/bin/python
+sudo ln -sf /usr/bin/python3 /usr/bin/python
 ```
 
 ## 安装依赖(通过 pip3 安装)
@@ -92,17 +92,17 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 更改 pip3 的源指向国内源
 
     ```bash
-    $ mkdir ~/.pip
-    $ touch ~/.pip/pip.conf
-    $ gedit ~/.pip/pip.conf
+    mkdir ~/.pip
+    touch ~/.pip/pip.conf
+    gedit ~/.pip/pip.conf
     ```
-    
+
     键入以下内容到 `pip.conf` 文件：
-    
+
     ```ini
     [global]
     index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-	```
+    ```
 
 1. 安装依赖
 
@@ -130,11 +130,11 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     ```
 
 1. Ubuntu 18.04  安装 PHP 7.3：
-	
-	```bash
-	$ sudo add-apt-repository ppa:ondrej/php
-    $ sudo apt-get update
-    $ sudo apt-get install -y \
+
+    ```bash
+    sudo add-apt-repository ppa:ondrej/php
+    sudo apt-get update
+    sudo apt-get install -y \
     php7.3            php7.3-enchant    php7.3-mbstring   php7.3-snmp \
     php7.3-bcmath     php7.3-fpm        php7.3-mysql      php7.3-soap \
     php7.3-bz2        php7.3-gd         php7.3-odbc       php7.3-sqlite3 \
@@ -144,8 +144,8 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
     php7.3-curl       php7.3-intl       php7.3-pspell     php7.3-xmlrpc \
     php7.3-dba        php7.3-json       php7.3-readline   php7.3-xsl \
     php7.3-dev        php7.3-ldap            php7.3-zip
-	```
-	
+    ```
+
     安装有些慢,如果实在太慢,可以先按 Ctrl+c 结束安装,然后再次运行,经过多次这样的操作就可以安装成功.
 
 1. 安装 composer
@@ -154,9 +154,9 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 
 1. 配置 Composer 国内镜像
 
-	```bash
-	composer config -g repo.packagist composer https://packagist.phpcomposer.com
-	```
+    ```bash
+    composer config -g repo.packagist composer https://packagist.phpcomposer.com
+    ```
 
 依赖安装完成.
 
@@ -166,6 +166,7 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 在命令/一般模式下输入 `:PlugInstall`.之后要耐心等待,毕竟 Github 不在国内.若是遇到下载错误,那必须尝试退出然后再次进入 Vim 执行同一命令,直到 `Finishing ... Done!`  出现.
 
 ## 安装 Phpactor
+
 1. 进入 ~/.vim/bundles/phpactor 再执行一下 composer 命令,直到依赖安装完成为止:
 
     ```bash
@@ -184,59 +185,60 @@ $ sudo ln -sf /usr/bin/python3 /usr/bin/python
 ### 准备
 
 #### 安装 clangd 方法一（Ubuntu 18.04 也可以用）
+
 1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Download` 目录,然后解压:
 
     ```bash
     # 可能下载速度很慢，如果想快些，那么请你另想办法，一定会有办法的。
-    $ wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-    $ tar Jxvf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+    wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+    tar Jxvf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
     ```
 
     得到 `clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04` 目录
 1. 將上面解压到的 LLVM 目录下的 bin 目录加入系统环境变量中去,以使用其的 clang、clang++及 clangd 三个命令。
 
     ```bash
-    $ vim ~/.bashrc
+    vim ~/.bashrc
     # 追加以下内容：
     export PATH="${HOME}/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${HOME}/.vim/bundles/phpactor/bin:${PATH}"
     # 保存退出
     # 使生效
-    $ source ~/.bashrc
-    $ sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd /usr/bin/
-    $ sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang /usr/bin/
-    $ sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++ /usr/bin/
+    source ~/.bashrc
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd /usr/bin/
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang /usr/bin/
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++ /usr/bin/
     # 如果执行以下命令
-    $ whereis clang
+    whereis clang
     ```
 
     得到以下的结果：
 
     ```ini
     clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
-    ```
-    
+```
+
     #### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
-    
+
     ```bash
     sudo apt-get install -y clang-10 clangd-10
     whereis clangd-10
     ```
-    
+
     执行结果：
-    
+
     ```
     clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
     ```
-    
+
     然后创建 clangd-10 和 clang-10 的软链接：
-    
+
     ```bash
     sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
     sudo ln -sf /usr/bin/clangd-10 /u
 sr/bin/clangd
-	```
-	
-	那么 clangd 就部署好了。
+    ```
+
+    那么 clangd 就部署好了。
 
 ### 编译 YouCompleteMe
 
@@ -258,8 +260,8 @@ sr/bin/clangd
 
 因为之前安装了 ag ，所以就用 `ag` 命令来搜索官方的域名，eclipse.org，然后将它替换为国内服务器，这样下载会快很多。
 
-```bash 
-$ ag "eclipse.org" .
+```bash
+ag "eclipse.org" .
 ```
 
 查找结果：
@@ -348,9 +350,9 @@ set -o errexit    # exit when command fails
 ###                 # Or use apt-get
 ###                     # sudo apt-get install nodejs
 ### fi
-### 
+###
 ### # Use package feature to install coc.nvim
-### 
+###
 ### # for vim8
 ### mkdir -p ~/.vim/pack/coc/start
 ### cd ~/.vim/pack/coc/start
@@ -378,7 +380,7 @@ chmod +x ~/.vim/coc-automation-script.sh
 bash ~/.vim/coc-automation-script.sh
 ```
 
-###  在 Vim 内，:CocConfig 打开 Coc 的配置文件
+### 在 Vim 内，:CocConfig 打开 Coc 的配置文件
 
 然后在 .vim 目录下会有个 `coc-settings.json` 文件，本文后面如无特殊说明，关于 coc.nvim 插件的配置均在此文件内。
 
@@ -389,63 +391,63 @@ bash ~/.vim/coc-automation-script.sh
 1. coc-clangd
 
     1. 此插件作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
-    
-    1. 安装方法： `:CocInstall coc-clangd`
-    
-	1. 配置：
 
-	vim .vim/coc-settings.json
-	
-	```json
-	"clangd.enabled": true,
+    1. 安装方法： `:CocInstall coc-clangd`
+
+    1. 配置：
+
+    vim .vim/coc-settings.json
+
+    ```json
+    "clangd.enabled": true,
     "clangd.path": "clangd"
-	```
-	
+    ```
+
 	具体配置请参阅： https://github.com/clangd/coc-clangd
 
 1. coc-css
-	
-	1. 此插件作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
 
-	1. 安装方法： `:CocInstall coc-css`
+    1. 此插件作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
 
-	1. 配置：
+    1. 安装方法： `:CocInstall coc-css`
 
-	```json
-	"css.enable": true,
+    1. 配置：
+
+    ```json
+    "css.enable": true,
     "css.trace.server": "verbose"
-	```
-	
+    ```
+
 	具体配置请参阅： https://github.com/neoclide/coc-css
-	
+
 1. coc-emmet
 
-	1. 为 coc.nvim 提供 Emmet 支持。
+    1. 为 coc.nvim 提供 Emmet 支持。
 
-	1. 安装方法： :CocInstall coc-emmet
+    1. 安装方法： `:CocInstall coc-emmet`
 
-	1. 配置：
+    1. 配置：
 
-	```json
-	"emmet.includeLanguages": {"vue-html": "html", "javascript": "javascripttreact"},
+    ```json
+    "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascripttreact"},
     "emmet.excludeLanguages": ["markdown"],
     "emmet.optimizeStylesheetParsing": false
-	```
-	
+    ```
+
 	配合 https://github.com/mattn/emmet-vim 使用。
-	
+
 	具体配置请参阅： https://github.com/neoclide/coc-emmet
-	
+
 1. coc-html
 
-	1. 为 coc.nvim 提供 Html 代码提示后端
+    1. 为 coc.nvim 提供 Html 代码提示后端
 
-	1. 安装方法： `:CocInstall coc-html`
+    1. 安装方法： `:CocInstall coc-html`
 
-	1. 配置：
+    1. 配置：
 
-	```json
-	"html.enable": true,
+    ```json
+    "html.enable": true,
     "html.trace.server": "messages",
     "html.filetypes": ["html","handlebars","htmldjango","blade","phtml"],
     "html.format.enable": true,
@@ -454,76 +456,69 @@ bash ~/.vim/coc-automation-script.sh
     "html.format.indentInnerHtml": true,
     "html.suggest.html5": true,
     "html.autoClosingTags": true,
-	```
-	
+    ```
+
 	具体配置请参阅： https://github.com/neoclide/coc-html
-	
+
 1. coc-jedi
 
-	1. coc.nvim 对于 Python 代码提示的插件，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
+    1. coc.nvim 对于 Python 代码提示的插件，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
 
-	1. 安装：
+    1. 安装：
+        * 安装 jedi-language-server：
+            ```bash
+            pip install -U jedi-language-server
+            ```
+            参考： https://github.com/pappasam/jedi-language-server#user-content-installation
+        * 安装 python3-venv ：
+            ```bash
+            sudo apt-get install -y python3-venv
+            ```
+        * 安装 coc-jedi ： `:CocInstall coc-jedi`
 
-		*. 安装 jedi-language-server：
+    1. 配置：
+        ```json
+        "jedi.enable": true,
+        "jedi.startupMessage": "messages",
+        "jedi.markupKindPreferred": "plaintext",
+        "jedi.trace.server": true,
+        "jedi.jediSettings.autoImportModules": [],
+        "jedi.executable.command": "jedi-language-server",
+        "jedi.executable.args": [],
+        "jedi.completion.disableSnippets": false,
+        "jedi.diagnostics.enable": true,
+        "jedi.diagnostics.didOpen": true,
+        "jedi.diagnostics.didChange": true,
+        "jedi.diagnostics.didSave": true
+	    ```
+        具体配置请参阅： https://github.com/pappasam/coc-jedi
 
-		```bash
-		pip install -U jedi-language-server
-		```
-		
-		参考： https://github.com/pappasam/jedi-language-server#user-content-installation
-		
-		*. 安装 python3-venv ：
-
-		```bash
-		sudo apt-get install -y python3-venv
-		```
-		
-		*. 安装 coc-jedi ： :CocInstall coc-jedi
-
-	1. 配置：
-
-	```json
-	"jedi.enable": true,
-    "jedi.startupMessage": "messages",
-    "jedi.markupKindPreferred": "plaintext",
-    "jedi.trace.server": true,
-    "jedi.jediSettings.autoImportModules": [],
-    "jedi.executable.command": "jedi-language-server",
-    "jedi.executable.args": [],
-    "jedi.completion.disableSnippets": false,
-    "jedi.diagnostics.enable": true,
-    "jedi.diagnostics.didOpen": true,
-    "jedi.diagnostics.didChange": true,
-    "jedi.diagnostics.didSave": true
-	```
-	具体配置请参阅： https://github.com/pappasam/coc-jedi
-	
 1. coc-json
 
-	1. coc.nvim 的 Json 语言服务端扩展。
+    1. coc.nvim 的 Json 语言服务端扩展。
 
-	1. 安装： :CocInstall coc-json
+    1. 安装： :CocInstall coc-json
 
-	1. 配置：
+    1. 配置：
 
-	```json
-	"json.enable": true,
+    ```json
+    "json.enable": true,
     "json.trace.server": "messages",
     "json.format.enable": true
-	```
-	
+    ```
+
 	具体配置请参阅： https://github.com/neoclide/coc-json
-	
+
 1. coc-phpactor
 
-	1. 把 CoC 与 Phpactor 集成起来的扩展。使用它之前需要安装 Phpactor。
+    1. 把 CoC 与 Phpactor 集成起来的扩展。使用它之前需要安装 Phpactor。
 
-	1. 安装： :CocInstall coc-phpactor
+    1. 安装： :CocInstall coc-phpactor
 
-	1. 配置：
+    1. 配置：
 
-	```json
-	"phpactor.enable": true,
+    ```json
+    "phpactor.enable": true,
     "phpactor.path": "~/.vim/bundles/phpactor/bin/phpactor",
     "languageserver": {
         "phpactor": {
@@ -533,131 +528,106 @@ bash ~/.vim/coc-automation-script.sh
             "filetypes": ["php"]
         }
     }
-	```
-	
+    ```
 	了解更多请访问： https://github.com/phpactor/coc-phpactor
-	
+
 1. coc-sh
 
-	1. SH 语言使用 [bash-language-server](https://github.com/mads-hartmann/bash-language-server) 作为服务端的 CoC 扩展。
+    1. SH 语言使用 [bash-language-server](https://github.com/mads-hartmann/bash-language-server) 作为服务端的 CoC 扩展。
 
-	1. 安装：
+    1. 安装：
+        * 安装 bash-language-server ：
+            ```bash
+            sudo npm i -g bash-language-server
+            ```
+        参阅： https://github.com/bash-lsp/bash-language-server
+        * 安装 coc-sh： :CocInstall coc-sh
 
-		*. 安装 bash-language-server ：
-
-		```bash
-		sudo npm i -g bash-language-server
-		```
-		
-		参阅： https://github.com/bash-lsp/bash-language-server
-		
-		*. 安装 coc-sh： :CocInstall coc-sh
-
-	1. 配置：
-
-	```json
-	"sh.enable": true
-	"languageserver": {
-        "bash": {
-          "command": "bash-language-server",
-          "args": ["start"],
-          "filetypes": ["sh"],
-          "ignoredRootPaths": ["~"]
+    1. 配置：
+        ```json
+        "sh.enable": true
+        "languageserver": {
+            "bash": {
+              "command": "bash-language-server",
+              "args": ["start"],
+              "filetypes": ["sh"],
+              "ignoredRootPaths": ["~"]
+            }
         }
-	}
-	```
-	
-	了解更多请访问： https://github.com/josa42/coc-sh
-	
+        ```
+        了解更多请访问： https://github.com/josa42/coc-sh
+
 1. coc-sql
 
-	1. coc.nvim 的 SQL 扩展。
+    1. coc.nvim 的 SQL 扩展。
 
-	1. 安装：
+    1. 安装：
+        * 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
+            ```bash
+            sudo npm install -g sql-formatter
+            sudo npm install node-sql-parser --save
+            ```
+        * 安装 coc-sql： :CocInstall coc-sql
+    1. 配置：
+        将以下内容放进 `coc-extensions.conf.vim` 文件中：
+        ```vim
+        xmap <leader>F  <Plug>(coc-format-selected)
+        nmap <leader>F  <Plug>(coc-format-selected)
+        ```
+        了解更多请访问： https://github.com/fannheyward/coc-sql
 
-		*. 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
-
-		```bash
-		sudo npm install -g sql-formatter
-		sudo npm install node-sql-parser --save
-		```
-		
-		*. 安装 coc-sql： :CocInstall coc-sql
-
-	1. 配置：
-
-	将以下内容放进 `coc-extensions.conf.vim` 文件中：
-
-	```vim
-	xmap <leader>F  <Plug>(coc-format-selected)
-	nmap <leader>F  <Plug>(coc-format-selected)
-	```
-	
-	了解更多请访问： https://github.com/fannheyward/coc-sql
-	
 1. coc-tsserver
 
-	1. coc.nvim 的 Javascript 与 TypeScript 语言服务端。
+    1. coc.nvim 的 Javascript 与 TypeScript 语言服务端。
 
-	1. 安装：
+    1. 安装：
+        * 安装 yarn （>= v2.0.0-rc.36）：
+    	    ```bash
+            # 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
+            sudo npm install -g yarn
+    	    ```
+        * 安装 coc-tsserver ： CocInstall coc-tsserver
 
-		*. 安装 yarn （>= v2.0.0-rc.36）：
+    1. 配置：
+        ```json
+        "tsserver.enable": true,
+        "tsserver.locale": "",
+        "tsserver.trace.server": "messages",
+        "tsserver.npm": "/usr/local/bin/npm",
+        "javascript.format.enabled": true,
+        "javascript.showUnused": true,
+        "javascript.updateImportsOnFileMove.enable": true
+        ```
+        更多配置选项在： https://github.com/neoclide/coc-tsserver
 
-		```bash
-		# 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
-		sudo npm install -g yarn
-		```
-		
-	
-		*. 安装 coc-tsserver ： CocInstall coc-tsserver
-	
-1. 配置： 
-	
-	```json
-   	"tsserver.enable": true,
-    "tsserver.locale": "",
-    "tsserver.trace.server": "messages",
-    "tsserver.npm": "/usr/local/bin/npm",
-    "javascript.format.enabled": true,
-    "javascript.showUnused": true,
-	"javascript.updateImportsOnFileMove.enable": true
-	```
-	
-	更多配置选项在： https://github.com/neoclide/coc-tsserver
-	
 1. coc-vimlsp
 
-	1. coc.nvim 的 Vim 语言后端。
+    1. coc.nvim 的 Vim 语言后端。
 
-	1. 安装： :CocInstall coc-vimlsp
+    1. 安装： :CocInstall coc-vimlsp
 
-	1. 配置：
-
-		*. 在 `coc-extensions.conf.vim` 文件中添加：
-		```vim
-		let g:markdown_fenced_languages = [
-              \ 'vim',
-              \ 'help'
-              \]
-      	```
-      
-      	*. 在 `cos-settings.json` 文件中追加：
-
-		```json
-		"vimlsp.trace.server": "messages",
+    1. 配置：
+        * 在 `coc-extensions.conf.vim` 文件中添加：
+        ```vim
+        let g:markdown_fenced_languages = [
+                  \ 'vim',
+                  \ 'help'
+                  \]
+        ```
+        * 在 `cos-settings.json` 文件中追加：
+        ```json
+        "vimlsp.trace.server": "messages",
         "vimlsp.debug": false,
         "vimlsp.indexes.projectRootPatterns": [".git", "autoload", "plugin",".root"]
-		```
-		
-		更多信息请访问： https://github.com/iamcco/coc-vimlsp
-	
+        ```
+        更多信息请访问： https://github.com/iamcco/coc-vimlsp
 
 其他的 Cos 扩展列表在： https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 
 ## 创建 undodir 目录(用于通过插件来保存文件修改记录)
 
 ```bash
-$ mkdir ~/.vim/undodir
+mkdir ~/.vim/undodir
 ```
 
 ## 如果只想配置 YCM
@@ -665,7 +635,7 @@ $ mkdir ~/.vim/undodir
 先安装以下依赖，然后就参考前面所撰写的步骤：
 
 ```bash
-$ sudo apt-get install -y build-essential cmake python3-dev npm nodejs python3 python3-pip openjdk-8-jdk --fix-missing
+sudo apt-get install -y build-essential cmake python3-dev npm nodejs python3 python3-pip openjdk-8-jdk --fix-missing
 ```
 
 如果不想要 js 和 Java，那么编译指令就要变成：
