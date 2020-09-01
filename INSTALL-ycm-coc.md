@@ -464,7 +464,7 @@ bash ~/.vim/coc-automation-script.sh
 
 	1. 安装：
 
-		1. 安装 jedi-language-server：
+		*. 安装 jedi-language-server：
 
 		```bash
 		pip install -U jedi-language-server
@@ -472,13 +472,13 @@ bash ~/.vim/coc-automation-script.sh
 		
 		参考： https://github.com/pappasam/jedi-language-server#user-content-installation
 		
-		1. 安装 python3-venv ：
+		*. 安装 python3-venv ：
 
 		```bash
 		sudo apt-get install -y python3-venv
 		```
 		
-		1. 安装 coc-jedi ： :CocInstall coc-jedi
+		*. 安装 coc-jedi ： :CocInstall coc-jedi
 
 	1. 配置：
 
@@ -543,7 +543,7 @@ bash ~/.vim/coc-automation-script.sh
 
 	1. 安装：
 
-		1. 安装 bash-language-server ：
+		*. 安装 bash-language-server ：
 
 		```bash
 		sudo npm i -g bash-language-server
@@ -551,7 +551,7 @@ bash ~/.vim/coc-automation-script.sh
 		
 		参阅： https://github.com/bash-lsp/bash-language-server
 		
-		1. 安装 coc-sh： :CocInstall coc-sh
+		*. 安装 coc-sh： :CocInstall coc-sh
 
 	1. 配置：
 
@@ -575,14 +575,14 @@ bash ~/.vim/coc-automation-script.sh
 
 	1. 安装：
 
-		1. 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
+		*. 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
 
 		```bash
 		sudo npm install -g sql-formatter
 		sudo npm install node-sql-parser --save
 		```
 		
-		1. 安装 coc-sql： :CocInstall coc-sql
+		*. 安装 coc-sql： :CocInstall coc-sql
 
 	1. 配置：
 
@@ -601,17 +601,20 @@ bash ~/.vim/coc-automation-script.sh
 
 	1. 安装：
 
-		1. 安装 yarn （>= v2.0.0-rc.36）：
+		*. 安装 yarn （>= v2.0.0-rc.36）：
+
 		```bash
 		# 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
 		sudo npm install -g yarn
-		```	
-		1. :CocInstall coc-tsserver
+		```
+		
 	
-	1. 配置： 
+		*. 安装 coc-tsserver ： CocInstall coc-tsserver
+	
+1. 配置： 
 	
 	```json
-    "tsserver.enable": true,
+   	"tsserver.enable": true,
     "tsserver.locale": "",
     "tsserver.trace.server": "messages",
     "tsserver.npm": "/usr/local/bin/npm",
@@ -630,21 +633,25 @@ bash ~/.vim/coc-automation-script.sh
 
 	1. 配置：
 
-		1. 在 `coc-extensions.conf.vim` 文件中添加：
+		*. 在 `coc-extensions.conf.vim` 文件中添加：
 		```vim
 		let g:markdown_fenced_languages = [
               \ 'vim',
               \ 'help'
               \]
-      	```      
-      	1. 在 `cos-settings.json` 文件中追加：
+      	```
+      
+      	*. 在 `cos-settings.json` 文件中追加：
+
 		```json
 		"vimlsp.trace.server": "messages",
         "vimlsp.debug": false,
         "vimlsp.indexes.projectRootPatterns": [".git", "autoload", "plugin",".root"]
-		```		
+		```
+		
 		更多信息请访问： https://github.com/iamcco/coc-vimlsp
 	
+
 其他的 Cos 扩展列表在： https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 
 ## 创建 undodir 目录(用于通过插件来保存文件修改记录)
