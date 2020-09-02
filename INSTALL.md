@@ -118,9 +118,9 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 安装依赖
 
     ```bash
-    $ sudo python3 -m pip install -U pip
-    $ python3 -m pip install --user powerline-status
-    $ sudo python3 -m pip install vint
+    sudo python3 -m pip install -U pip
+    python3 -m pip install --user powerline-status
+    sudo python3 -m pip install vint
     ```
 
 ## 安装 composer (Phpactor 插件需要)
@@ -181,14 +181,14 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 进入 ~/.vim/bundles/phpactor 再执行一下 composer 命令,直到依赖安装完成为止:
 
     ```bash
-    $ cd ~/.vim/bundles/phpactor
-    $ composer install
-    $ vim ~/.bashrc
+    cd ~/.vim/bundles/phpactor
+    composer install
+    vim ~/.bashrc
     # 追加以下内容：
     export PATH="${HOME}/.vim/bundles/phpactor/bin:${PATH}"
     # 保存退出
     # 使生效
-    $ source ~/.bashrc
+    source ~/.bashrc
     ```
 
 ## 编译安装 YouCompleteMe
@@ -255,13 +255,13 @@ sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
 1. 进入 ycm 的目录
 
     ```bash
-    $ cd ~/.vim/bundles/YouCompleteMe/
+    cd ~/.vim/bundles/YouCompleteMe/
     ```
 
 1. 执行 git 初始化任务
 
     ```bash
-    $ git submodule update --init --recursive
+    git submodule update --init --recursive
     ```
 
     如果以上命令执行时没有输出，则表示 YCM 所需的代码下载完成。
@@ -595,6 +595,8 @@ bash ~/.vim/coc-automation-script.sh
     	    ```bash
             # 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
             sudo npm install -g yarn
+            sudo yarn set version berry
+            # 如果出现错误，可参照：https://www.chengxuzhilu.com/2398.html 的解决方案。
     	    ```
         * 安装 coc-tsserver ： CocInstall coc-tsserver
 
@@ -640,12 +642,12 @@ bash ~/.vim/coc-automation-script.sh
 mkdir ~/.vim/undodir
 ```
 
-## 如果只想配置 YCM
+## 如果只想配置 YCM 用于支持 C/C++
 
 先安装以下依赖，然后就参考前面所撰写的步骤：
 
 ```bash
-sudo apt-get install -y build-essential cmake python3-dev npm nodejs python3 python3-pip openjdk-8-jdk --fix-missing
+sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 python3 python3-pip --fix-missing
 ```
 
 如果不想要 js 和 Java，那么编译指令就要变成：
