@@ -43,7 +43,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
 
-Plug 'ludovicchabant/vim-gutentags'
+""" Plug 'ludovicchabant/vim-gutentags'
 " Plug 'skywind3000/gutentags_plus'
 
 
