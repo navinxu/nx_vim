@@ -193,6 +193,8 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 
 ## 编译安装 YouCompleteMe
 
+由于暂时还没有弄懂 Coc-nvim 的 Java 配置，那么就用 YCM 进行配置 Java 开发环境，在这种情况下，YCM 或许在编译时只需要加上 `--java-completer` ，而其他的语言就没有必要通过 YCM 配置自动补全功能，用 Coc-nvim 就行了。
+
 ### 准备
 
 #### 安装 clangd 方法一（Ubuntu 18.04 也可以用，如果 Ubuntu 20.04 用此法，则需要修改 “ubuntu-18.04” 部分）
@@ -598,7 +600,7 @@ bash ~/.vim/coc-automation-script.sh
             sudo yarn set version berry
             # 如果出现错误，可参照：https://www.chengxuzhilu.com/2398.html 的解决方案。
     	    ```
-        * 安装 coc-tsserver ： CocInstall coc-tsserver
+        * 安装 coc-tsserver ： :CocInstall coc-tsserver
 
     1. 配置：
         ```json
