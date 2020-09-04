@@ -591,10 +591,13 @@ third_party/ycmd/build.py
 
 ### 开始编译 YCM
 
+可以按需进行编译，例如：只想用 YCM 来补全 Java，那么就只需要在编译时加上 `--java-completer` 条件，如果需要 C/C++ 和 Java，就可以以 `--cland-completer --java-completer` 作为条件进行编译。
+
 执行以下命令进行编译：
 
 ```bash
-./install.py --js-completer --clangd-completer --java-completer
+# 本条编译命令使 YCM 支持 JavaScript、TypeScript、C/C++ 和 Java
+./install.py --js-completer --ts-completer --clangd-completer --java-completer
 ```
 
 编译过程中出现一些错误而终止了编译：
@@ -623,12 +626,6 @@ sudo chown -R 1000:1000 /home/username/.npm
 
 再次用同样的参数进行编译。
 
-由于 Coc-nvim 插件也可以作为 C/C++ 代码提示的前端，因此以下命令也可不加上编译条件 `--clangd-completer`。
-
-```bash
-./install.py --js-completer --clangd-completer--java-completer
-```
-
 如果遇到：
 
 ```ini
@@ -637,6 +634,12 @@ Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure t
 ```
 
 那么就表示编译成功！
+
+由于 Coc-nvim 插件也可以作为 C/C++、JS、TS 代码提示的前端，因此以下命令也可不加上编译条件 `--js-completer --ts-completer --clangd-completer`。
+
+```bash
+./install.py --java-completer
+```
 
 ## 创建 undodir 目录(用于通过插件来保存文件修改记录)
 
