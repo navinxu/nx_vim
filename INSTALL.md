@@ -637,33 +637,13 @@ Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure t
 
 由于 Coc-nvim 插件也可以作为 C/C++、JS、TS 代码提示的前端，因此以下命令也可不加上编译条件 `--js-completer --ts-completer --clangd-completer`。
 
+如果只需要 Java 的代码补全：
+
 ```bash
 ./install.py --java-completer
 ```
 
-## 创建 undodir 目录(用于通过插件来保存文件修改记录)
-
-```bash
-mkdir ~/.vim/undodir
-```
-
-## 如果只想配置 YCM 用于支持 C/C++
-
-先安装以下依赖，然后就参考前面所撰写的步骤：
-
-```bash
-sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 python3 python3-pip --fix-missing
-```
-
-如果不想要 js 和 Java，那么编译指令就要变成：
-
-```bash
-./install.py --clangd-completer
-```
-
-其他的由你灵活掌握！
-
-然后可参考本人的 Vim 配置文件 `vimrc.plugin.conf` 的最前面部分，YCM 配置结束位置有 `END` 字样的边界。
+关于 YCM 的配置可参考本人的 Vim 配置文件 `ycm-config.vim` 。
 
 另，如果没有仓库中那三个 `ycm_extra_conf.py` 文件，则 YCM 会变成没有用的废物。
 
@@ -671,6 +651,12 @@ YouCompleteMe 的官方仓库是：https://github.com/ycm-core/YouCompleteMe
 
 YCM 的配置详细信息：　https://github.com/ycm-core/YouCompleteMe/wiki/Full-Installation-Guide
 
+## 创建 undodir 目录(用于通过插件来保存文件修改记录)
+
+```bash
+mkdir ~/.vim/undodir
+```
+
 ## 结语
 
-本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。
+本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2，在 Ubuntu 18.04 LTS Desktop 也是可以的。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。
