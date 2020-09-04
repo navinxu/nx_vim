@@ -53,7 +53,7 @@ ln -sf ~/.vim/vimrc ~/.vimrc
 ## 安装依赖(通过 apt)
 
 ```bash
-# 保证 gcc >= 8.0,以及 JDK >= 8.0
+# 确保 gcc >= 8.0,以及 JDK >= 8.0
 sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
 ```
 
@@ -190,150 +190,6 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
     # 使生效
     source ~/.bashrc
     ```
-
-## 编译安装 YouCompleteMe
-
-由于暂时还没有弄懂 Coc-nvim 的 Java 配置，那么就用 YCM 进行配置 Java 开发环境，在这种情况下，YCM 或许在编译时只需要加上 `--java-completer` ，而其他的语言就没有必要通过 YCM 配置自动补全功能，用 Coc-nvim 就行了。
-
-### 准备
-
-#### 安装 clangd 方法一（Ubuntu 18.04 也可以用，如果 Ubuntu 20.04 用此法，则需要修改 “ubuntu-18.04” 部分）
-
-1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Download` 目录,然后解压:
-
-    ```bash
-    # 可能下载速度很慢，如果想快些，那么请你另想办法，一定会有办法的。
-    wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-    tar Jxvf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-    ```
-
-    得到 `clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04` 目录
-1. 將上面解压到的 LLVM 目录下的 bin 目录加入系统环境变量中去,以使用其的 clang、clang++及 clangd 三个命令。
-
-    ```bash
-    vim ~/.bashrc
-    # 追加以下内容：
-    export PATH="${HOME}/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${HOME}/.vim/bundles/phpactor/bin:${PATH}"
-    # 保存退出
-    # 使生效
-    source ~/.bashrc
-    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd /usr/bin/
-    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang /usr/bin/
-    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++ /usr/bin/
-    # 如果执行以下命令
-    whereis clang
-    ```
-
-    得到以下的结果：
-
-    ```ini
-    clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
-    ```
-
-#### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
-
-```bash
-sudo apt-get install -y clang-10 clangd-10
-whereis clangd-10
-```
-
-执行结果：
-
-```
-clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
-```
-
-然后创建 clangd-10 和 clang-10 的软链接：
-
-```bash
-sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
-sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
-```
-
-那么 clangd 就部署好了。
-
-### 编译 YouCompleteMe
-
-1. 进入 ycm 的目录
-
-    ```bash
-    cd ~/.vim/bundles/YouCompleteMe/
-    ```
-
-1. 执行 git 初始化任务
-
-    ```bash
-    git submodule update --init --recursive
-    ```
-
-    如果以上命令执行时没有输出，则表示 YCM 所需的代码下载完成。
-
-### 修改编译时必要组件的下载服务器（换成国内）
-
-因为之前安装了 ag ，所以就用 `ag` 命令来搜索官方的域名，eclipse.org，然后将它替换为国内服务器，这样下载会快很多。
-
-```bash
-ag "eclipse.org" .
-```
-
-查找结果：
-
-```
-...
-third_party/ycmd/build.py
-975:  JDTLS_SERVER_URL_FORMAT = ( “http://download.eclipse.org/jdtls/snapshots/”
-```
-
-找的就是这个文件！然后，把 `http://download.eclipse.org/` 替换为 `http://mirrors.neusoft.edu.cn/eclipse/`。
-
-### 开始编译 YCM
-
-执行以下命令进行编译：
-
-```bash
-./install.py --js-completer --clangd-completer --java-completer
-```
-
-编译过程中出现一些错误而终止了编译：
-
-```ini
-npm ERR! code EACCES
-npm ERR! syscall mkdir
-npm ERR! path /home/username/.npm/_cacache/index-v5/a9/0f
-npm ERR! errno -13
-npm ERR!
-npm ERR! Your cache folder contains root-owned files, due to a bug in
-npm ERR! previous versions of npm which has since been addressed.
-npm ERR!
-npm ERR! To permanently fix this problem, please run:
-npm ERR!   sudo chown -R 1000:1000 "/home/username/.npm"
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/username/.npm/_logs/2020-06-01T07_27_26_302Z-debug.log
-```
-
-解决此问题的方法是执行：
-
-```bash
-sudo chown -R 1000:1000 /home/username/.npm
-```
-
-再次用同样的参数进行编译。
-
-由于 Coc-nvim 插件也可以作为 C/C++ 代码提示的前端，因此以下命令也可不加上编译条件 `--clangd-completer`。
-
-```bash
-./install.py --js-completer --clangd-completer--java-completer
-```
-
-如果遇到：
-
-```ini
-Done installing Clangd
-Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure they use Settings() instead of the old and deprecated FlagsForFile().
-```
-
-那么就表示编译成功！
 
 ## 安装配置 Coc-nvim
 
@@ -637,6 +493,150 @@ bash ~/.vim/coc-automation-script.sh
         更多信息请访问： https://github.com/iamcco/coc-vimlsp
 
 其他的 Cos 扩展列表在： https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+
+## 编译安装 YouCompleteMe
+
+由于暂时还没有弄懂 Coc-nvim 的 Java 配置，那么就用 YCM 进行配置 Java 开发环境，在这种情况下，YCM 或许在编译时只需要加上 `--java-completer` ，而其他的语言就没有必要通过 YCM 配置自动补全功能，用 Coc-nvim 就行了。
+
+### 准备
+
+#### 安装 clangd 方法一（Ubuntu 18.04 也可以用，如果 Ubuntu 20.04 用此法，则需要修改 “ubuntu-18.04” 部分）
+
+1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Download` 目录,然后解压:
+
+    ```bash
+    # 可能下载速度很慢，如果想快些，那么请你另想办法，一定会有办法的。
+    wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+    tar Jxvf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+    ```
+
+    得到 `clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04` 目录
+1. 將上面解压到的 LLVM 目录下的 bin 目录加入系统环境变量中去,以使用其的 clang、clang++及 clangd 三个命令。
+
+    ```bash
+    vim ~/.bashrc
+    # 追加以下内容：
+    export PATH="${HOME}/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:${HOME}/.vim/bundles/phpactor/bin:${PATH}"
+    # 保存退出
+    # 使生效
+    source ~/.bashrc
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd /usr/bin/
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang /usr/bin/
+    sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++ /usr/bin/
+    # 如果执行以下命令
+    whereis clang
+    ```
+
+    得到以下的结果：
+
+    ```ini
+    clangd: /usr/bin/clangd /home/username/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clangd
+    ```
+
+#### 安装 Clangd 10 方法 二 （只能 Ubuntu 20.04 用）
+
+```bash
+sudo apt-get install -y clang-10 clangd-10
+whereis clangd-10
+```
+
+执行结果：
+
+```
+clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
+```
+
+然后创建 clangd-10 和 clang-10 的软链接：
+
+```bash
+sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
+sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
+```
+
+那么 clangd 就部署好了。
+
+### 编译 YouCompleteMe
+
+1. 进入 ycm 的目录
+
+    ```bash
+    cd ~/.vim/bundles/YouCompleteMe/
+    ```
+
+1. 执行 git 初始化任务
+
+    ```bash
+    git submodule update --init --recursive
+    ```
+
+    如果以上命令执行时没有输出，则表示 YCM 所需的代码下载完成。
+
+### 修改编译时必要组件的下载服务器（换成国内）
+
+因为之前安装了 ag ，所以就用 `ag` 命令来搜索官方的域名，eclipse.org，然后将它替换为国内服务器，这样下载会快很多。
+
+```bash
+ag "eclipse.org" .
+```
+
+查找结果：
+
+```
+...
+third_party/ycmd/build.py
+975:  JDTLS_SERVER_URL_FORMAT = ( “http://download.eclipse.org/jdtls/snapshots/”
+```
+
+找的就是这个文件！然后，把 `http://download.eclipse.org/` 替换为 `http://mirrors.neusoft.edu.cn/eclipse/`。
+
+### 开始编译 YCM
+
+执行以下命令进行编译：
+
+```bash
+./install.py --js-completer --clangd-completer --java-completer
+```
+
+编译过程中出现一些错误而终止了编译：
+
+```ini
+npm ERR! code EACCES
+npm ERR! syscall mkdir
+npm ERR! path /home/username/.npm/_cacache/index-v5/a9/0f
+npm ERR! errno -13
+npm ERR!
+npm ERR! Your cache folder contains root-owned files, due to a bug in
+npm ERR! previous versions of npm which has since been addressed.
+npm ERR!
+npm ERR! To permanently fix this problem, please run:
+npm ERR!   sudo chown -R 1000:1000 "/home/username/.npm"
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/username/.npm/_logs/2020-06-01T07_27_26_302Z-debug.log
+```
+
+解决此问题的方法是执行：
+
+```bash
+sudo chown -R 1000:1000 /home/username/.npm
+```
+
+再次用同样的参数进行编译。
+
+由于 Coc-nvim 插件也可以作为 C/C++ 代码提示的前端，因此以下命令也可不加上编译条件 `--clangd-completer`。
+
+```bash
+./install.py --js-completer --clangd-completer--java-completer
+```
+
+如果遇到：
+
+```ini
+Done installing Clangd
+Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure they use Settings() instead of the old and deprecated FlagsForFile().
+```
+
+那么就表示编译成功！
 
 ## 创建 undodir 目录(用于通过插件来保存文件修改记录)
 
