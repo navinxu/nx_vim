@@ -1,5 +1,6 @@
 "" "set termguicolors
 set t_Co=256
+colorscheme stellarized
 "colorscheme rusticated
 "let g:airline_theme='rusticated'
 "
@@ -8,7 +9,6 @@ set t_Co=256
 " colorscheme solarized
 "colorscheme rusticated
 "colorscheme angr
-colorscheme stellarized
 "" "let g:monokai_term_italic = 1
 "" "let g:monokai_gui_italic = 1
 "
