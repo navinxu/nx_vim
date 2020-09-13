@@ -5,6 +5,8 @@ Created On: 2020-06-01
 
 > 操作系统: Ubuntu 20.04 LTS x64 Desktop for WSL 2
 >
+> 经测试，本内容可在 Ubuntu 18.04 和 Ubuntu 20.04 部署。
+>
 > 本人的 Vim 配置的 Github 仓库网址是：　https://github.com/navinxu/nx_vim
 
 本文主要讲述应用 Vim 的一些插件协助 YouCompleteMe 和 Coc-nvim 两款代码补全插件完成简单 IDE 的搭建，集代码补全、代码错误提示、文件管理、Git 发现、文本和文件/目录的搜索于一身。如果有时间，本人会持续更新本文。
@@ -22,7 +24,13 @@ Created On: 2020-06-01
 要求的 Vim 版本是 >= 8.1
 
 ```bash
+# Ubuntu 20.04，默认是 Vim 8.1
 sudo apt-get install -y vim-gtk3
+
+# 而 Ubuntu 18.04，默认是 Vim 8.0，
+# 要想安装符合条件的 Vim 版本，
+# 则必须用第三方软件库，
+# 安装方法请参阅：https://www.chengxuzhilu.com/2233.html
 ```
 
 ## 安装 Git
@@ -140,11 +148,25 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
     php7.4-dev        php7.4-ldap            php7.4-zip
     ```
 
-1. Ubuntu 18.04  安装 PHP 7.3：
+1. Ubuntu 18.04  安装 PHP：
 
     ```bash
     sudo add-apt-repository ppa:ondrej/php
     sudo apt-get update
+    
+    # 安装 7.4 版本
+    sudo apt-get install -y \
+    php7.4            php7.4-enchant    php7.4-mbstring   php7.4-snmp \
+    php7.4-bcmath     php7.4-fpm        php7.4-mysql      php7.4-soap \
+    php7.4-bz2        php7.4-gd         php7.4-odbc       php7.4-sqlite3 \
+    php7.4-cgi        php7.4-gmp        php7.4-opcache    php7.4-sybase \
+    php7.4-cli        php7.4-imap       php7.4-pgsql      php7.4-tidy \
+    php7.4-common     php7.4-interbase  php7.4-phpdbg     php7.4-xml \
+    php7.4-curl       php7.4-intl       php7.4-pspell     php7.4-xmlrpc \
+    php7.4-dba        php7.4-json       php7.4-readline   php7.4-xsl \
+    php7.4-dev        php7.4-ldap            php7.4-zip
+
+    # 安装 7.3 版本
     sudo apt-get install -y \
     php7.3            php7.3-enchant    php7.3-mbstring   php7.3-snmp \
     php7.3-bcmath     php7.3-fpm        php7.3-mysql      php7.3-soap \
