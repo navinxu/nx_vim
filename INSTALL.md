@@ -260,6 +260,8 @@ bash ~/.vim/coc-automation-script.sh
 
     1. 此插件作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
 
+    1. Clangd 的安装在本文的后面在介绍 YouCompleteMe 时有介绍。
+
     1. 安装方法： `:CocInstall coc-clangd`
 
     1. 配置：
@@ -591,7 +593,7 @@ third_party/ycmd/build.py
 
 ### 开始编译 YCM
 
-可以按需进行编译，例如：只想用 YCM 来补全 Java，那么就只需要在编译时加上 `--java-completer` 条件，如果需要 C/C++ 和 Java，就可以以 `--cland-completer --java-completer` 作为条件进行编译。
+可以按需进行编译，例如：只想用 YCM 来补全 Java，那么就只需要在编译时加上 `--java-completer` 条件，如果需要 C/C++ 和 Java，就可以以 `--clangd-completer --java-completer` 作为条件进行编译。
 
 执行以下命令进行编译：
 
