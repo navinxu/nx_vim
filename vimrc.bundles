@@ -43,7 +43,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/office'
 
-""" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 " Plug 'skywind3000/gutentags_plus'
 
 
@@ -51,7 +51,6 @@ Plug 'sillybun/vim-repl'
 Plug 'sillybun/vim-async'
 """Plug 'sillybun/zytutilo'
 
-" 因为已经开启 coc，所以也不再需要 YCM
 Plug 'ycm-core/YouCompleteMe'
 
 "" Laravel
@@ -78,6 +77,10 @@ Plug 'ycm-core/YouCompleteMe'
     " Other php hinter
     " Plug 'phpactor/phpactor'
     Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+    " Plug 'ncm2/ncm2'
+    " Plug 'roxma/nvim-yarp'
+    " Plug 'phpactor/ncm2-phpactor'
+    " Plug 'roxma/vim-hug-neovim-rpc'
     
 " JS support
     Plug 'wokalski/autocomplete-flow'
@@ -93,7 +96,7 @@ Plug 'tweekmonster/django-plus.vim'
 " Java support
 Plug 'artur-shaik/vim-javacomplete2'
 
-""" Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 
 Plug 'mbbill/undotree'
 Plug 'xolox/vim-misc'
@@ -105,7 +108,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tenfyzhong/CompleteParameter.vim'
 
 
-Plug 'dsawardekar/wordpress.vim'
+" Plug 'dsawardekar/wordpress.vim'
 "Plug 'shawncplus/phpcomplete.vim'
 "Plug 'Shougo/vimproc.vim'
 "Plug 'Shougo/unite.vim'
