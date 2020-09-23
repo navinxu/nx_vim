@@ -1,23 +1,50 @@
 # 让 Vim 成为有 IDE 功能的代码编辑器
 
 Created On: 2020-06-01
+Updated On: 2020-09-23
 
 
-> 操作系统: Ubuntu 20.04 LTS x64 Desktop for WSL 2
+> 操作系统: Ubuntu 20.04 LTS x64 Gnome Desktop for WSL 2
 >
-> 经测试，本文内容可在 Ubuntu 18.04 和 Ubuntu 20.04 部署。
+> 经测试，本文内容可在拥有图形界面的 Ubuntu 18.04 和 Ubuntu 20.04 上部署。
+>
+> 没有图形界面的命令行下未经测试，不一定兼容。
 >
 > 本人的 Vim 配置的 Github 仓库网址是：　https://github.com/navinxu/nx_vim
 
-本文主要讲述应用 Vim 的一些插件协助 YouCompleteMe 和 Coc-nvim 两款代码补全插件完成简单 IDE 的搭建（为了增强 Vim IDE 的搭建和易用性，自 2020 年 9 月 23 日起不启用 YCM，所有本人配置出来所支持的编程语言皆使用 Coc-nvim 进行代码智能补全。也就是说 YouCompleteMe 已经退出历史舞台，但它的安装配置仍然会在本文中提到），集代码补全、代码错误提示、文件管理、Git 发现、文本和文件/目录的搜索于一身。如果有时间，本人会持续更新本文。
+## 前言
+
+本文主要讲述应用 Vim 的一些插件协助 YouCompleteMe 和 Coc-nvim 两款代码补全插件完成简单 IDE 的搭建（为了减弱 Vim IDE 的搭建难度，自 2020 年 9 月 23 日起不启用 YCM，所有本人配置出来所支持的编程语言皆使用 Coc-nvim 进行代码智能补全。也就是说 YouCompleteMe 已经退出历史舞台，但它的安装配置仍然会在本文中提到），集代码补全、代码错误提示、文件管理、Git 发现、文本和文件/目录的搜索于一身。如果有新想法，本人会持续更新本文。
 
 注意：本文依赖的是本人的 Vim 配置，如果换了新的环境，或者别的配置，本文的一些配置可能会失效，或者出现错误。
 
 本文的一些安装方法是通用的，这里说的通用是指只要根据环境的变化对配置方法进行少量的修改不影响使用，如果你在配置自己的 Vim 时使用了本文的方法，但是出了问题，可以与本人联系，我们一起探讨，一起进步。联系邮箱：admin@navinxu.com 。
 
-关于本人 Vim 配置设定的一些快捷键，由于还没有固定下来，所以以后若有空会贴在这里的。
+关于本人 Vim 配置设定的一些快捷键，由于还没有固定下来，以后会贴在README 文件的。
 
 在这个配置的使用中有任何问题可以与我联系，只要有空，就会第一时间回应。
+
+由于国内外之间的网络带宽和时延的原因，本文所书的一些下载速度会很慢，例如要从 Github 拉仓库内容到本地，或者下载一些必要的文件。这时可能会用上直通国外网络的技术，如果是 Socks5 代理，可以使用 `Proxychains`这个软件，安装方式如下：
+
+```bash
+sudo apt-get install -y proxychains
+```
+
+配置 Proxychains :
+
+```bash
+sudo vim /etc/proxychains.conf
+# 然后将文件底部的 socks4 改为 socks5，
+# 以及（可能）还要修改 IP 地址或端口，看情况而定。
+# 保存并退出文件，修改在该程序重新运行时生效。
+```
+
+使用 Proxychains :
+
+```bash
+proxychains git clone https://github.com/navinxu/nx_vim.git
+proxychains wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+```
 
 ## 安装 Vim
 
@@ -97,7 +124,7 @@ sudo npm i -g flow-bin
 
 ```bash
 # 安装 Ruby
-sudo apt-get install ruby-full -y
+sudo apt-get install ruby -y
 sudo gem install mdl
 ```
 
