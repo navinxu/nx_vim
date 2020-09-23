@@ -5,11 +5,11 @@ Created On: 2020-06-01
 
 > 操作系统: Ubuntu 20.04 LTS x64 Desktop for WSL 2
 >
-> 经测试，本内容可在 Ubuntu 18.04 和 Ubuntu 20.04 部署。
+> 经测试，本文内容可在 Ubuntu 18.04 和 Ubuntu 20.04 部署。
 >
 > 本人的 Vim 配置的 Github 仓库网址是：　https://github.com/navinxu/nx_vim
 
-本文主要讲述应用 Vim 的一些插件协助 YouCompleteMe 和 Coc-nvim 两款代码补全插件完成简单 IDE 的搭建，集代码补全、代码错误提示、文件管理、Git 发现、文本和文件/目录的搜索于一身。如果有时间，本人会持续更新本文。
+本文主要讲述应用 Vim 的一些插件协助 YouCompleteMe 和 Coc-nvim 两款代码补全插件完成简单 IDE 的搭建（为了增强 Vim IDE 的搭建和易用性，自 2020 年 9 月 23 日起不启用 YCM，所有本人配置出来所支持的编程语言皆使用 Coc-nvim 进行代码智能补全。也就是说 YouCompleteMe 已经退出历史舞台，但它的安装配置仍然会在本文中提到），集代码补全、代码错误提示、文件管理、Git 发现、文本和文件/目录的搜索于一身。如果有时间，本人会持续更新本文。
 
 注意：本文依赖的是本人的 Vim 配置，如果换了新的环境，或者别的配置，本文的一些配置可能会失效，或者出现错误。
 
@@ -61,8 +61,11 @@ ln -sf ~/.vim/vimrc ~/.vimrc
 ## 安装依赖(通过 apt)
 
 ```bash
-# 确保 gcc >= 8.0,以及 JDK >= 8.0
-sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack openjdk-8-jdk tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+# 确保 gcc >= 8.0
+# 如果不需要 YCM
+sudo apt-get install -y python3-dev gcc-8 g++-8 npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+# 如果需要 YCM
+sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
 ```
 
 ## 更改 npm 为国内源
@@ -278,15 +281,15 @@ bash ~/.vim/coc-automation-script.sh
 
 ### 在 Vim 内，安装 Coc 的插件（Coc extensions）
 
-1. coc-clangd
+#### coc-clangd
 
-    1. 此插件作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
+1. 此插件作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
 
-    1. Clangd 的安装在本文的后面在介绍 YouCompleteMe 时有介绍。
+1. Clangd 的安装在本文的后面在介绍 YouCompleteMe 时有介绍。
 
-    1. 安装方法： `:CocInstall coc-clangd`
+1. 安装方法： `:CocInstall coc-clangd`
 
-    1. 配置：
+1. 配置：
 
     vim .vim/coc-settings.json
 
@@ -295,30 +298,30 @@ bash ~/.vim/coc-automation-script.sh
     "clangd.path": "clangd"
     ```
 
-	具体配置请参阅： https://github.com/clangd/coc-clangd
+具体配置请参阅： https://github.com/clangd/coc-clangd
 
-1. coc-css
+#### coc-css
 
-    1. 此插件作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
+1. 此插件作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
 
-    1. 安装方法： `:CocInstall coc-css`
+1. 安装方法： `:CocInstall coc-css`
 
-    1. 配置：
+1. 配置：
 
     ```json
     "css.enable": true,
     "css.trace.server": "verbose"
     ```
 
-	具体配置请参阅： https://github.com/neoclide/coc-css
+具体配置请参阅： https://github.com/neoclide/coc-css
 
-1. coc-emmet
+#### coc-emmet
 
-    1. 为 coc.nvim 提供 Emmet 支持。
+1. 为 coc.nvim 提供 Emmet 支持。
 
-    1. 安装方法： `:CocInstall coc-emmet`
+1. 安装方法： `:CocInstall coc-emmet`
 
-    1. 配置：
+1. 配置：
 
     ```json
     "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascripttreact"},
@@ -326,17 +329,17 @@ bash ~/.vim/coc-automation-script.sh
     "emmet.optimizeStylesheetParsing": false
     ```
 
-	配合 https://github.com/mattn/emmet-vim 使用。
+    配合 https://github.com/mattn/emmet-vim 使用。
 
-	具体配置请参阅： https://github.com/neoclide/coc-emmet
+具体配置请参阅： https://github.com/neoclide/coc-emmet
 
-1. coc-html
+#### coc-html
 
-    1. 为 coc.nvim 提供 Html 代码提示后端
+1. 为 coc.nvim 提供 Html 代码提示后端
 
-    1. 安装方法： `:CocInstall coc-html`
+1. 安装方法： `:CocInstall coc-html`
 
-    1. 配置：
+1. 配置：
 
     ```json
     "html.enable": true,
@@ -350,48 +353,76 @@ bash ~/.vim/coc-automation-script.sh
     "html.autoClosingTags": true
     ```
 
-	具体配置请参阅： https://github.com/neoclide/coc-html
+具体配置请参阅： https://github.com/neoclide/coc-html
 
-1. coc-jedi
+#### coc-java
 
-    1. coc.nvim 对于 Python 代码提示的插件，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
+1. 这是 Java 的代码补全 Coc 扩展，以  jdt.ls 为后端。
 
-    1. 安装：
-        * 安装 jedi-language-server：
-            ```bash
-            pip install -U jedi-language-server
-            ```
-            参考： https://github.com/pappasam/jedi-language-server#user-content-installation
-        * 安装 python3-venv ：
-            ```bash
-            sudo apt-get install -y python3-venv
-            ```
-        * 安装 coc-jedi ： `:CocInstall coc-jedi`
+1. 注意：一定要在打开 Java 代码文件之前完成 coc-java 扩展的所有依赖配置
 
-    1. 配置：
-        ```json
-        "jedi.enable": true,
-        "jedi.startupMessage": "messages",
-        "jedi.markupKindPreferred": "plaintext",
-        "jedi.trace.server": true,
-        "jedi.jediSettings.autoImportModules": [],
-        "jedi.executable.command": "jedi-language-server",
-        "jedi.executable.args": [],
-        "jedi.completion.disableSnippets": false,
-        "jedi.diagnostics.enable": true,
-        "jedi.diagnostics.didOpen": true,
-        "jedi.diagnostics.didChange": true,
-        "jedi.diagnostics.didSave": true
-	    ```
-        具体配置请参阅： https://github.com/pappasam/coc-jedi
+1. 安装： :CocInstall coc-java
 
-1. coc-json
+1. 安装依赖：
+    * 到 https://www.oracle.com/java/technologies/javase-downloads.html 下载 JDK 11 最新版本（JDK 8 也可以，但是要求最新版本，也就是说 Ubuntu 20.04 所提供的版本不够高），找到 JDK 11 ，下载 DEB 包文件，假设下载的 DEB 包是 jdk-11.0.8_linux-x64_bin.deb ，执行 `sudo dpkg -i jdk-11.0.8_linux-x64_bin.deb` ，然后把 `/usr/lib/jvm/jdk-11.0.8/bin/` 目录的绝对路径追加到系统用户的 PATH 路径中（export PATH="/path/to/jdk-11/bin:${PATH}"，并把它写进 ~/.bashrc 文件中）。
+    * 到 http://mirrors.neusoft.edu.cn/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz 下载后端 jdt.ls ，把下载好的压缩包放到 `~/Downloads/jdt/` 目录，并就地解压缩，最后删除压缩包。
+    * 配置：
 
-    1. coc.nvim 的 Json 语言服务端扩展。
+    ```json
+    "java.enabled": true,
+    "java.home": "/usr/lib/jvm/jdk-11.0.8",
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-11",
+          "path": "/usr/lib/jvm/jdk-11.0.8"
+        }
+    ],
+    "java.jdt.ls.home": "~/Downloads/jdt"
+    ```
 
-    1. 安装： :CocInstall coc-json
+还有更多的东西移步： https://github.com/neoclide/coc-java
 
-    1. 配置：
+#### coc-jedi
+
+1. coc.nvim 对于 Python 代码提示的插件，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
+
+1. 安装：
+    * 安装 jedi-language-server：
+        ```bash
+        pip install -U jedi-language-server
+        ```
+        参考： https://github.com/pappasam/jedi-language-server#user-content-installation
+    * 安装 python3-venv ：
+        ```bash
+        sudo apt-get install -y python3-venv
+        ```
+    * 安装 coc-jedi ： `:CocInstall coc-jedi`
+
+1. 配置：
+    ```json
+    "jedi.enable": true,
+    "jedi.startupMessage": "messages",
+    "jedi.markupKindPreferred": "plaintext",
+    "jedi.trace.server": true,
+    "jedi.jediSettings.autoImportModules": [],
+    "jedi.executable.command": "jedi-language-server",
+    "jedi.executable.args": [],
+    "jedi.completion.disableSnippets": false,
+    "jedi.diagnostics.enable": true,
+    "jedi.diagnostics.didOpen": true,
+    "jedi.diagnostics.didChange": true,
+    "jedi.diagnostics.didSave": true
+    ```
+
+具体配置请参阅： https://github.com/pappasam/coc-jedi
+
+#### coc-json
+
+1. coc.nvim 的 Json 语言服务端扩展。
+
+1. 安装： :CocInstall coc-json
+
+1. 配置：
 
     ```json
     "json.enable": true,
@@ -399,15 +430,15 @@ bash ~/.vim/coc-automation-script.sh
     "json.format.enable": true
     ```
 
-	具体配置请参阅： https://github.com/neoclide/coc-json
+具体配置请参阅： https://github.com/neoclide/coc-json
 
-1. coc-phpactor
+#### coc-phpactor
 
-    1. 把 CoC 与 Phpactor 集成起来的扩展。使用它之前需要安装 Phpactor。
+1. 把 CoC 与 Phpactor 集成起来的扩展。使用它之前需要安装 Phpactor。
 
-    1. 安装： :CocInstall coc-phpactor
+1. 安装： :CocInstall coc-phpactor
 
-    1. 配置：
+1. 配置：
 
     ```json
     "phpactor.enable": true,
@@ -421,100 +452,107 @@ bash ~/.vim/coc-automation-script.sh
         }
     }
     ```
-	了解更多请访问： https://github.com/phpactor/coc-phpactor
 
-1. coc-sh
+了解更多请访问： https://github.com/phpactor/coc-phpactor
 
-    1. SH 语言使用 [bash-language-server](https://github.com/mads-hartmann/bash-language-server) 作为服务端的 CoC 扩展。
+#### coc-sh
 
-    1. 安装：
-        * 安装 bash-language-server ：
-            ```bash
-            sudo npm i -g bash-language-server
-            ```
-        参阅： https://github.com/bash-lsp/bash-language-server
-        * 安装 coc-sh： :CocInstall coc-sh
+1. SH 语言使用 [bash-language-server](https://github.com/mads-hartmann/bash-language-server) 作为服务端的 CoC 扩展。
 
-    1. 配置：
-        ```json
-        "sh.enable": true
-        "languageserver": {
-            "bash": {
-              "command": "bash-language-server",
-              "args": ["start"],
-              "filetypes": ["sh"],
-              "ignoredRootPaths": ["~"]
-            }
+1. 安装：
+    * 安装 bash-language-server ：
+        ```bash
+        sudo npm i -g bash-language-server
+        ```
+    参阅： https://github.com/bash-lsp/bash-language-server
+    * 安装 coc-sh： :CocInstall coc-sh
+
+1. 配置：
+
+    ```json
+    "sh.enable": true,
+    "languageserver": {
+        "bash": {
+          "command": "bash-language-server",
+          "args": ["start"],
+          "filetypes": ["sh"],
+          "ignoredRootPaths": ["~"]
         }
+    }
+    ```
+
+了解更多请访问： https://github.com/josa42/coc-sh
+
+#### coc-sql
+
+1. coc.nvim 的 SQL 扩展。
+
+1. 安装：
+    * 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
+        ```bash
+        sudo npm install -g sql-formatter
+        sudo npm install node-sql-parser --save
         ```
-        了解更多请访问： https://github.com/josa42/coc-sh
+    * 安装 coc-sql： :CocInstall coc-sql
+1. 配置：
+    将以下内容放进 `coc-extensions.conf.vim` 文件中：
+    ```vim
+    xmap <leader>F  <Plug>(coc-format-selected)
+    nmap <leader>F  <Plug>(coc-format-selected)
+    ```
 
-1. coc-sql
+了解更多请访问： https://github.com/fannheyward/coc-sql
 
-    1. coc.nvim 的 SQL 扩展。
+#### coc-tsserver
 
-    1. 安装：
-        * 安装 [sql-formatter](https://github.com/zeroturnaround/sql-formatter) 和 [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
-            ```bash
-            sudo npm install -g sql-formatter
-            sudo npm install node-sql-parser --save
-            ```
-        * 安装 coc-sql： :CocInstall coc-sql
-    1. 配置：
-        将以下内容放进 `coc-extensions.conf.vim` 文件中：
-        ```vim
-        xmap <leader>F  <Plug>(coc-format-selected)
-        nmap <leader>F  <Plug>(coc-format-selected)
-        ```
-        了解更多请访问： https://github.com/fannheyward/coc-sql
+1. coc.nvim 的 Javascript 与 TypeScript 语言服务端。
 
-1. coc-tsserver
+1. 安装：
+    * 安装 yarn （>= v2.0.0-rc.36）：
+	    ```bash
+        # 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
+        sudo npm install -g yarn
+        sudo yarn set version berry
+        # 如果出现错误，可参照：https://www.chengxuzhilu.com/2398.html 的解决方案。
+	    ```
+    * 安装 coc-tsserver ： :CocInstall coc-tsserver
 
-    1. coc.nvim 的 Javascript 与 TypeScript 语言服务端。
+1. 配置：
 
-    1. 安装：
-        * 安装 yarn （>= v2.0.0-rc.36）：
-    	    ```bash
-            # 今天是 2020-09-01，yarn 版本尚未升级到 v2.0.0+
-            sudo npm install -g yarn
-            sudo yarn set version berry
-            # 如果出现错误，可参照：https://www.chengxuzhilu.com/2398.html 的解决方案。
-    	    ```
-        * 安装 coc-tsserver ： :CocInstall coc-tsserver
+    ```json
+    "tsserver.enable": true,
+    "tsserver.locale": "",
+    "tsserver.trace.server": "messages",
+    "tsserver.npm": "/usr/local/bin/npm",
+    "javascript.format.enabled": true,
+    "javascript.showUnused": true,
+    "javascript.updateImportsOnFileMove.enable": true
+    ```
 
-    1. 配置：
-        ```json
-        "tsserver.enable": true,
-        "tsserver.locale": "",
-        "tsserver.trace.server": "messages",
-        "tsserver.npm": "/usr/local/bin/npm",
-        "javascript.format.enabled": true,
-        "javascript.showUnused": true,
-        "javascript.updateImportsOnFileMove.enable": true
-        ```
-        更多配置选项在： https://github.com/neoclide/coc-tsserver
+更多配置选项在： https://github.com/neoclide/coc-tsserver
 
-1. coc-vimlsp
+#### coc-vimlsp
 
-    1. coc.nvim 的 Vim 语言后端。
+1. coc.nvim 的 Vim 语言后端。
 
-    1. 安装： :CocInstall coc-vimlsp
+1. 安装： :CocInstall coc-vimlsp
 
-    1. 配置：
-        * 在 `coc-extensions.conf.vim` 文件中添加：
-        ```vim
-        let g:markdown_fenced_languages = [
-                  \ 'vim',
-                  \ 'help'
-                  \]
-        ```
-        * 在 `cos-settings.json` 文件中追加：
-        ```json
-        "vimlsp.trace.server": "messages",
-        "vimlsp.debug": false,
-        "vimlsp.indexes.projectRootPatterns": [".git", "autoload", "plugin",".root"]
-        ```
-        更多信息请访问： https://github.com/iamcco/coc-vimlsp
+1. 配置：
+    * 在 `coc-extensions.conf.vim` 文件中添加：
+    ```vim
+    let g:markdown_fenced_languages = [
+              \ 'vim',
+              \ 'help'
+              \]
+    ```
+    * 在 `cos-settings.json` 文件中追加：
+    ```json
+    "vimlsp.trace.server": "messages",
+    "vimlsp.debug": false,
+    "vimlsp.indexes.projectRootPatterns": [".git", "autoload", "plugin",".root"]
+    ```
+
+更多信息请访问： https://github.com/iamcco/coc-vimlsp
 
 其他的 Cos 扩展列表在： https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 
@@ -524,9 +562,9 @@ bash ~/.vim/coc-automation-script.sh
 
 ### 准备
 
-#### 安装 clangd 方法一（Ubuntu 18.04 也可以用，如果 Ubuntu 20.04 用此法，则需要修改 “ubuntu-18.04” 部分）
+#### 安装 clangd 方法一（Ubuntu 18.04 也可以用，如果 Ubuntu 20.04 用此法，则需要修改下载网址以及本地目录路径中相应的 “ubuntu-18.04” 部分）
 
-1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Download` 目录,然后解压:
+1. 由于目前 YCM 要求 clangd 的版本要大于等于 10.0,所以要在 LLVM 网站 (https://releases.llvm.org/download.html) 上下载最新的与操作系统对应的编译好的二进制打包文件(Pre-Built Binaries).这里是: Ubuntu 18.04,将其下载到 `~/Downloads` 目录,然后解压:
 
     ```bash
     # 可能下载速度很慢，如果想快些，那么请你另想办法，一定会有办法的。
@@ -575,6 +613,7 @@ clangd-10: /usr/bin/clangd-10 /usr/share/man/man1/clangd-10.1.gz
 ```bash
 sudo ln -sf /usr/bin/clang-10 /usr/bin/clang
 sudo ln -sf /usr/bin/clangd-10 /usr/bin/clangd
+sudo ln -sf /usr/bin/clang++-10 /usr/bin/clang++
 ```
 
 那么 clangd 就部署好了。
@@ -683,4 +722,4 @@ mkdir ~/.vim/undodir
 
 ## 结语
 
-本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2，在 Ubuntu 18.04 LTS Desktop 也是可以的。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考 Github 上面以及网络上的资料进行了。
+本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2，在 Ubuntu 18.04 LTS Desktop 也是可以的。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考网络上的资料。

@@ -1,5 +1,5 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "html", "python","php"],
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "html", "python","php","java"],
     "phpactor.enable": true,
     "phpactor.path": "~/.vim/bundles/phpactor/bin/phpactor",
     "languageserver": {
@@ -16,7 +16,6 @@
           "ignoredRootPaths": ["~"]
         }
     },
-    "phpls.enable": false,
     "suggest.minTriggerInputLength": 1,
     "clangd.enabled": true,
     "clangd.path": "clangd",
@@ -73,40 +72,49 @@
         "php": "phpcs"
     },
     "diagnostic-languageserver.enable": true,
-     "diagnostic-languageserver.linters": {
-        "phpcs": {
-            "command": "~/Downloads/phpcs/bin/phpcs",
-            "debounce": 100,
-            "rootPatterns": [
-              "composer.json",
-              "composer.lock",
-              "vendor",
-              ".git",
-              ".root"
-            ],
-            "args": [
-              "--standard=PSR2",
-              "--report=emacs",
-              "-s",
-              "-"
-            ],
-            "offsetLine": 0,
-            "offsetColumn": 0,
-            "sourceName": "phpcs",
-            "formatLines": 1,
-            "formatPattern": [
-              "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)$",
-              {
-                "line": 1,
-                "column": 2,
-                "message": 4,
-                "security": 3
-              }
-            ],
-            "securities": {
-              "error": "error",
-              "warning": "warning"
-            }
+    "diagnostic-languageserver.linters": {
+       "phpcs": {
+           "command": "~/Downloads/phpcs/bin/phpcs",
+           "debounce": 100,
+           "rootPatterns": [
+             "composer.json",
+             "composer.lock",
+             "vendor",
+             ".git",
+             ".root"
+           ],
+           "args": [
+             "--standard=PSR2",
+             "--report=emacs",
+             "-s",
+             "-"
+           ],
+           "offsetLine": 0,
+           "offsetColumn": 0,
+           "sourceName": "phpcs",
+           "formatLines": 1,
+           "formatPattern": [
+             "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)$",
+             {
+               "line": 1,
+               "column": 2,
+               "message": 4,
+               "security": 3
+             }
+           ],
+           "securities": {
+             "error": "error",
+             "warning": "warning"
+           }
+       }
+    },
+    "java.enabled": true,
+    "java.home": "/usr/lib/jvm/jdk-11.0.8",
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-11",
+          "path": "/usr/lib/jvm/jdk-11.0.8"
         }
-    }
+    ],
+    "java.jdt.ls.home": "/home/istrue/Downloads/jdt"
 }
