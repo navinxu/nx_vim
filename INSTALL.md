@@ -105,7 +105,7 @@ npm config set registry https://registry.npm.taobao.org
 
 ```bash
 sudo npm install -g -U npm
-# sudo npm install -g -U n
+sudo npm install -g -U n
 sudo n stable
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
