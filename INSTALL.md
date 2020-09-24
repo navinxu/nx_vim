@@ -107,6 +107,7 @@ npm config set registry https://registry.npm.taobao.org
 sudo npm install -g -U npm
 sudo npm install -g -U n
 sudo n stable
+# Ubuntu 20.04
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 ```
