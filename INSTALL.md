@@ -1,8 +1,8 @@
 # 让 Vim 成为有 IDE 功能的代码编辑器
 
 Created On: 2020-06-01
-Updated On: 2020-09-23
 
+Updated On: 2020-09-24
 
 > 操作系统: Ubuntu 20.04 LTS x64 Gnome Desktop for WSL 2
 >
