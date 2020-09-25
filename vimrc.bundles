@@ -56,7 +56,7 @@ Plug 'sillybun/vim-async'
 "" Laravel
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-projectionist'
-    Plug 'noahfrederick/vim-composer'
+    " Plug 'noahfrederick/vim-composer'
     Plug 'noahfrederick/vim-laravel'
     Plug 'jwalton512/vim-blade'
 
@@ -94,7 +94,7 @@ Plug 'Shougo/neco-vim'
 Plug 'tweekmonster/django-plus.vim'
 
 " Java support
-Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'artur-shaik/vim-javacomplete2'
 
 " Plug 'ervandew/supertab'
 
