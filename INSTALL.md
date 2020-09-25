@@ -419,6 +419,15 @@ bash ~/.vim/coc-automation-script.sh
         ```bash
         pip install -U jedi-language-server
         ```
+        然后把路径 `${HOME}/.local/bin` 追加到系统环境变量中： 
+        ```bash
+        nano ~/.bashrc
+        # 输入以下一行
+        export PATH="${HOME}/.local/bin:${PATH}"
+        # 然后保存退出
+        # 使更新的 .bashrc 文件生效
+        source ~/.bashrc
+        ```
         参考： https://github.com/pappasam/jedi-language-server#user-content-installation
     * 安装 python3-venv ：
         ```bash
