@@ -90,9 +90,9 @@ ln -sf ~/.vim/vimrc ~/.vimrc
 ```bash
 # 确保 gcc >= 8.0
 # 如果不需要 YCM
-sudo apt-get install -y python3-dev gcc-8 g++-8 npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+sudo apt-get install -y python3-dev gcc-8 g++-8 npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 curl ctags --fix-missing
 # 如果需要 YCM
-sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 --fix-missing
+sudo apt-get install -y build-essential cmake python3-dev gcc-8 g++-8 cscope ctags npm nodejs python3 silversearcher-ag ack tidy python3-pip fonts-powerline shellcheck ispell flake8 curl ctags --fix-missing
 ```
 
 ## 更改 npm 为国内源
