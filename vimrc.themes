@@ -1,5 +1,6 @@
 "" "set termguicolors
 set t_Co=256
+set background=light
 colorscheme stellarized
 "colorscheme rusticated
 "let g:airline_theme='rusticated'
