@@ -116,5 +116,5 @@
           "path": "/usr/lib/jvm/jdk-11.0.8"
         }
     ],
-    "java.jdt.ls.home": "/home/istrue/Downloads/jdt"
+    "java.jdt.ls.home": "~/Downloads/jdt"
 }
