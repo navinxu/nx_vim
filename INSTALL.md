@@ -622,7 +622,7 @@ bash ~/.vim/coc-automation-script.sh
     sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang /usr/bin/
     sudo ln -sf ~/Downloads/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/clang++ /usr/bin/
     # 如果执行以下命令
-    whereis clang
+    whereis clangd
     ```
 
     得到以下的结果：
