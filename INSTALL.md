@@ -404,7 +404,7 @@ bash ~/.vim/coc-automation-script.sh
           "path": "/usr/lib/jvm/jdk-11.0.8"
         }
     ],
-    "java.jdt.ls.home": "~/Downloads/jdt"
+    "java.jdt.ls.home": "Your user home dir/Downloads/jdt"
     ```
 
 还有更多的东西移步： https://github.com/neoclide/coc-java
