@@ -751,7 +751,7 @@ Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure t
 
 另，如果没有仓库中那三个 `ycm_extra_conf.py` 文件，则 YCM 会变成没有用的废物。
 
-注意：如果不想 YCM 支持的编程语言（文件后缀）与其他（例如： Coc-nvim）代码补全插件想冲突，那么请在 `ycm-config.vim`文件中的 `g:ycm_filetype_blacklist` 变量中声明出来。或者想要支持某种编程语言，就请将它从黑名单中删除。然后保存文件并退出，在下一次打开文件时生效。
+注意：如果不想 YCM 支持的编程语言（文件后缀）与其他（例如： Coc-nvim）代码补全插件想冲突，那么请在 `ycm-config.vim`文件中的 `g:ycm_filetype_blacklist` 变量中声明出来。或者想要支持某种编程语言，就请将它从黑名单中移除。然后保存文件并退出，同时要在别的补全插件中对该编程语言禁用，不然易出问题。在下一次打开文件时生效。
 
 YouCompleteMe 的官方仓库是：https://github.com/ycm-core/YouCompleteMe
 
