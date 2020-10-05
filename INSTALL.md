@@ -2,7 +2,7 @@
 
 Created On: 2020-06-01
 
-Updated On: 2020-10-04
+Updated On: 2020-10-07
 
 > 操作系统: Ubuntu 20.04 LTS x64 Gnome Desktop for WSL 2
 >
@@ -226,7 +226,12 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 ## 开始安装 Vim 插件
 
 1. 首先进入 Vim (在插件还没有安装好之前,会有错误提示,不过以后会没有的).
+
 1. 在命令/一般模式下输入 `:PlugInstall`.之后要耐心等待,毕竟 Github 不在国内.若是遇到下载错误,那必须尝试退出然后再次进入 Vim 执行同一命令,直到 `Finishing ... Done!`  出现.
+
+1. 如果想要安装 YouCompleteMe 插件，那么请完成以下两个步骤：
+    1. 在 `vimrc.bundles` 文件中取消 `Plug 'ycm-core/YouCompleteMe'` 一行的注释，保存文件但不退出，并且执行`:so %` 和 `:PlugInstall` 两个 Vim 命令。
+    1. 安装好所有的插件后，在 `vimrc.plugin.conf` 文件取消 `source ~/.vim/ycm-config.vim` 一行的注释，然后保存文件并且退出。在重新用 Vim 打开文件时生效。
 
 ## 安装 Phpactor
 
@@ -745,6 +750,8 @@ Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure t
 关于 YCM 的配置可参考本人的 Vim 配置文件 `ycm-config.vim` 。
 
 另，如果没有仓库中那三个 `ycm_extra_conf.py` 文件，则 YCM 会变成没有用的废物。
+
+注意：如果不想 YCM 支持的编程语言（文件后缀）与其他（例如： Coc-nvim）代码补全插件想冲突，那么请在 `ycm-config.vim`文件中的 `g:ycm_filetype_blacklist` 变量中声明出来。或者想要支持某种编程语言，就请将它从黑名单中删除。然后保存文件并退出，在下一次打开文件时生效。
 
 YouCompleteMe 的官方仓库是：https://github.com/ycm-core/YouCompleteMe
 
