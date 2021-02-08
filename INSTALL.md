@@ -303,6 +303,8 @@ npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-pac
 ```bash
 chmod +x ~/.vim/coc-automation-script.sh
 bash ~/.vim/coc-automation-script.sh
+# 安装 pynvim ，以让 neovim 支持 python
+sudo python3 -m pip install pynvim
 ```
 
 ### 在 Vim 内，:CocConfig 打开 Coc 的配置文件
