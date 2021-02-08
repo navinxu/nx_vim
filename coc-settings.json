@@ -109,11 +109,12 @@
        }
     },
     "java.enabled": true,
-    "java.home": "/usr/lib/jvm/jdk-11.0.8",
+    "java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
     "java.configuration.runtimes": [
         {
           "name": "JavaSE-11",
-          "path": "/usr/lib/jvm/jdk-11.0.8"
+          "path": "/usr/lib/jvm/java-11-openjdk-amd64"
         }
-   ]
+   ],
+   "java.jdt.ls.home": "/home/username/Downloads/jdt-language-server-latest"
 }
