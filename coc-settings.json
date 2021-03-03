@@ -115,5 +115,6 @@
           "name": "JavaSE-11",
           "path": "/usr/lib/jvm/jdk-11.0.10"
         }
-   ]
+   ],
+   "java.jdt.ls.home": "~/Downloads/jdt-language-server-latest"
 }
