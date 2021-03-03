@@ -1,0 +1,1 @@
+/home/istrue/.vim/vimrc
