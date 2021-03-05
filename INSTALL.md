@@ -48,8 +48,9 @@ proxychains wget https://github.com/llvm/llvm-project/releases/download/llvmorg-
 
 ## 安装 Vim
 
-要求的 Vim 版本是 >= 8.1
+要求的 Vim 版本是 >= 8.1，或者最新（最好是）版本的 NeoVim。
 
+### 如果使用 Vim
 ```bash
 # Ubuntu 20.04，默认是 Vim 8.1
 sudo apt-get install -y vim-gtk3
@@ -58,6 +59,31 @@ sudo apt-get install -y vim-gtk3
 # 要想安装符合条件的 Vim 版本，
 # 则必须用第三方软件库，
 # 安装方法请参阅：https://www.chengxuzhilu.com/2233.html
+```
+
+### 如果使用 NeoVim
+
+#### 下载 NeoVim
+
+到 https://github.com/neovim/neovim/releases 下载最新版本的 NeoVim，在资源（Assets）那里选择 “nvim.appimage” 这个来下载。
+
+下载时可能要连接外网。
+
+```bash
+# 给予 nvim.appimage 文件可执行的仅限
+cd /path/to/nvim/download/directory
+chmod +x nvim.appimage
+sudo cp nvim.appimage /usr/local/bin/nvim
+# 打开并编辑用户 Home 目录下的 .bashrc 文件
+vim ~/.bashrc
+# 添加以下两行
+# 1.
+alias vi="nvim "
+# 2.
+alias vim="nvim "
+# ESC -> :wq 保存退出编辑
+# 终端上执行
+source ~/.bashrc
 ```
 
 ## 安装 Git
@@ -83,6 +109,12 @@ mkdir ~/.vim/bundles
 
 ```bash
 ln -sf ~/.vim/vimrc ~/.vimrc
+```
+
+## 配置 NeoVim （如果选择的是它）
+
+```bash
+ln -sf ~/.vim ~/.config/nvim
 ```
 
 ## 安装依赖(通过 apt)
@@ -399,20 +431,22 @@ sudo python3 -m pip install pynvim
 
 1. 安装依赖：
     * 到 https://www.oracle.com/java/technologies/javase-downloads.html 下载 JDK 11 最新版本（JDK 8 也可以，但是要求最新版本，也就是说 Ubuntu 20.04 所提供的版本不够高），找到 JDK 11 ，下载 DEB 包文件，假设下载的 DEB 包是 jdk-11.0.8_linux-x64_bin.deb ，执行 `sudo dpkg -i jdk-11.0.8_linux-x64_bin.deb` ，然后把 `/usr/lib/jvm/jdk-11.0.8/bin/` 目录的绝对路径追加到系统用户的 PATH 路径中（export PATH="/path/to/jdk-11/bin:${PATH}"，并把它写进 ~/.bashrc 文件中）。
-    * 到 http://mirrors.neusoft.edu.cn/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz 下载后端 jdt.ls ，把下载好的压缩包放到 `~/Downloads/jdt/` 目录，并就地解压缩，最后删除压缩包。
+    * 在使用 Vim/NeoVim 打开任何 Java 文件之前（如果在进行此一步之前打开，那么要先卸载 coc-java 插件（ :CocUninstall coc-java ），然后重新安装此插件，然后进行这一步），到 http://mirrors.neusoft.edu.cn/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz 下载后端 jdt.ls ，把下载好的压缩包放到 `~/Downloads/` 目录，并就地解压缩，最后删除压缩包。
     * 配置：
 
     ```json
     "java.enabled": true,
-    "java.home": "/usr/lib/jvm/jdk-11.0.8",
+    "java.home": "/usr/lib/jvm/jdk-11.0.10",
     "java.configuration.runtimes": [
         {
           "name": "JavaSE-11",
-          "path": "/usr/lib/jvm/jdk-11.0.8"
+          "path": "/usr/lib/jvm/jdk-11.0.10"
         }
     ],
     "java.jdt.ls.home": "Your user home dir/Downloads/jdt"
     ```
+    其中，路径 `/usr/lib/jvm/jdk-11.0.10` 指安装的 JDK 版本相对应的安装路径，前后时间安装的可能不同。
+
 
 还有更多的东西移步： https://github.com/neoclide/coc-java
 
@@ -768,3 +802,7 @@ mkdir ~/.vim/undodir
 ## 结语
 
 本人的 Vim 配置就此配置完成，工作平台是 Ubuntu 20.04 for WSL 2，在 Ubuntu 18.04 LTS Desktop 也是可以的。其他操作系统上尚未尝试过，若你需要在其他操作系统上配置，那么就要参考网络上的资料。
+
+# 更新历史（从 2021-03-05 起）
+
+Update: 2021-03-05 增加 NeoVim 的安装和配置
