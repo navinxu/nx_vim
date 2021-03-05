@@ -46,7 +46,7 @@ proxychains git clone https://github.com/navinxu/nx_vim.git
 proxychains wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 ```
 
-## 安装 Vim
+## 安装 Vim/NeoVim
 
 要求的 Vim 版本是 >= 8.1，或者最新（最好是）版本的 NeoVim。
 
