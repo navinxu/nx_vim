@@ -443,7 +443,7 @@ sudo python3 -m pip install pynvim
           "path": "/usr/lib/jvm/jdk-11.0.10"
         }
     ],
-    "java.jdt.ls.home": "Your user home dir/Downloads/jdt-language-server-latest"
+    "java.jdt.ls.home": "Your user home absolute path(include /home/username)/Downloads/jdt-language-server-latest"
     ```
     其中，路径 `/usr/lib/jvm/jdk-11.0.10` 指安装的 JDK 版本相对应的安装路径，前后时间安装的可能不同。
 
