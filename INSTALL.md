@@ -139,8 +139,17 @@ npm config set registry https://registry.npm.taobao.org
 sudo npm install -g -U npm
 sudo npm install -g -U n
 sudo n stable
+# 如果下载顺利
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
+# 如果无法下载
+# 可以把安装程序打印出来的 Node 下载地址复制到浏览器，
+# 然后下载到本地，再把解压得到的目录下面的所有文件（不包括文件夹本身）
+# 复制到 /usr/local/n/versions/node/14.16.0/ 目录（当前版本为 14.16.0）
+sudo cp -vfr ~/Downloads/node-v14.16.0-linux-x64/* /usr/local/n/versions/node/14.16.0/
+# 复盖原有的 node 和 nodejs 两个可执行文件
+sudo ln -sf /usr/local/n/versions/node/14.16.0/bin/node /usr/bin/node
+sudo ln -sf /usr/local/n/versions/node/14.16.0/bin/node /usr/bin/nodejs
 ```
 
 ## 安装依赖(通过 npm 安装)
