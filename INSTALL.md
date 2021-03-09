@@ -2,7 +2,7 @@
 
 Created On: 2020-06-01
 
-Updated On: 2020-10-05
+Updated On: 2021-03-09
 
 > 操作系统: Ubuntu 20.04 LTS x64 Gnome Desktop for WSL 2
 >
@@ -815,3 +815,5 @@ mkdir ~/.vim/undodir
 # 更新历史（从 2021-03-05 起）
 
 Update: 2021-03-05 增加 NeoVim 的安装和配置
+
+Update: 2021-03-09 增加关于 NodeJs 升级的描述
