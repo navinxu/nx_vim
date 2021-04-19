@@ -154,6 +154,7 @@ sudo cp -vfr ~/Downloads/node-v14.16.1-linux-x64/* /usr/local/n/versions/node/14
 # 复盖原有的 node 和 nodejs 两个可执行文件
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/nodejs
+sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/npm /usr/bin/npm
 # 然后再重新依次执行上面的命令
 ```
 
