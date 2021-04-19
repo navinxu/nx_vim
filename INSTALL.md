@@ -152,9 +152,9 @@ sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 # 当前（2021-04-19）node 的最新稳定版是 v14.16.1，下载地址如下：
 # https://nodejs.org/dist/v14.16.1/node-v14.16.1-linux-x64.tar.xz
 # 解压，然后：
-# 可以把安装程序打印出来的 Node 下载地址复制到浏览器，
-# 然后下载到本地，再把解压得到的目录下面的所有文件（不包括文件夹本身）
+# 把解压得到的目录下面的所有文件（不包括文件夹本身）
 # 复制到 /usr/local/n/versions/node/14.16.1/ 目录（当前版本为 14.16.0）
+sudo mkdir -p /usr/local/n/versions/node/14.16.1/
 sudo cp -vfr ~/Downloads/node-v14.16.1-linux-x64/* /usr/local/n/versions/node/14.16.1/
 # 复盖原有的 node 和 nodejs 两个可执行文件
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
