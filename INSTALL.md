@@ -132,9 +132,12 @@ npm config set registry https://registry.npm.taobao.org
 ## 更新 npm 和 nodejs 的版本
 
 ```bash
+# 如果第一次无法成功升级
+# 需要执行完下面的命令后重新执行以下三行命令
 sudo npm install -g -U npm
 sudo npm install -g -U n
 sudo n stable
+
 # 如果下载顺利
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
@@ -155,7 +158,7 @@ sudo cp -vfr ~/Downloads/node-v14.16.1-linux-x64/* /usr/local/n/versions/node/14
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/nodejs
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/npm /usr/bin/npm
-# 然后再重新依次执行上面的命令
+# 然后再重新依次执行本节中最上面三行命令
 ```
 
 ## 安装依赖(通过 npm 安装)
