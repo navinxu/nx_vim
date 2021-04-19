@@ -135,12 +135,14 @@ npm config set registry https://registry.npm.taobao.org
 
 ```bash
 # 如果第一次无法成功升级
-# 需要执行完下面的命令后重新执行以下五行命令
+# 需要执行完本小节中的命令后重新执行以下五行命令
 sudo npm install -g -U npm
 sudo npm install -g -U n
 sudo n stable
 
 # 如果下载顺利
+# 且保证 /usr/local/bin/ 目录下有 node 这个文件
+# 可通过 **whereis node** 命令来查看
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 
