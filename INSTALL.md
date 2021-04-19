@@ -1,9 +1,5 @@
 # 让 Vim 成为有 IDE 功能的代码编辑器
 
-Created On: 2020-06-01
-
-Updated On: 2021-03-09
-
 > 操作系统: Ubuntu 20.04 LTS x64 Gnome Desktop for WSL 2
 >
 > 经测试，本文内容可在拥有图形界面的 Ubuntu 18.04 和 Ubuntu 20.04 上部署。
@@ -142,14 +138,23 @@ sudo n stable
 # 如果下载顺利
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
+
 # 如果无法下载
+# 由于 Ubuntu 18.04 通过 APT 安装的 nodejs 和 npm 版本太低，
+# 导致上面的操作无法成功，
+# 解决办法是到这里下载 nodejs 和 npm 的最新稳定版：
+# https://nodejs.org/zh-cn/download/
+# 当前（2021-04-19）node 的最新稳定版是 v14.16.1，下载地址如下：
+# https://nodejs.org/dist/v14.16.1/node-v14.16.1-linux-x64.tar.xz
+# 解压，然后：
 # 可以把安装程序打印出来的 Node 下载地址复制到浏览器，
 # 然后下载到本地，再把解压得到的目录下面的所有文件（不包括文件夹本身）
-# 复制到 /usr/local/n/versions/node/14.16.0/ 目录（当前版本为 14.16.0）
-sudo cp -vfr ~/Downloads/node-v14.16.0-linux-x64/* /usr/local/n/versions/node/14.16.0/
+# 复制到 /usr/local/n/versions/node/14.16.1/ 目录（当前版本为 14.16.0）
+sudo cp -vfr ~/Downloads/node-v14.16.1-linux-x64/* /usr/local/n/versions/node/14.16.1/
 # 复盖原有的 node 和 nodejs 两个可执行文件
-sudo ln -sf /usr/local/n/versions/node/14.16.0/bin/node /usr/bin/node
-sudo ln -sf /usr/local/n/versions/node/14.16.0/bin/node /usr/bin/nodejs
+sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
+sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/nodejs
+# 然后再重新依次执行上面的命令
 ```
 
 ## 安装依赖(通过 npm 安装)
@@ -255,6 +260,13 @@ sudo ln -sf /usr/bin/python3 /usr/bin/python
 1. 安装 composer
 
     参见: https://getcomposer.org/download/
+
+1. 把 Composer 复制进系统环境变量指定的路径中：
+
+    ```bash
+    chmod +x composer.phar
+    sudo mv composer.phar /usr/local/bin/composer
+    ```
 
 1. 配置 Composer 国内镜像
 
@@ -817,3 +829,9 @@ mkdir ~/.vim/undodir
 Update: 2021-03-05 增加 NeoVim 的安装和配置
 
 Update: 2021-03-09 增加关于 NodeJs 升级的描述
+
+Update: 2021-04-19 解决 Ubuntu 18.04 下 Node 版本太低升级的问题
+
+Created On: 2020-06-01
+
+Updated On: 2021-04-19
