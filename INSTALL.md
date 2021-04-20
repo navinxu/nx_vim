@@ -141,8 +141,8 @@ sudo npm install -g -U n
 sudo n stable
 
 # 如果下载顺利
-# 且保证 /usr/local/bin/ 目录下有 node 这个文件
-# 若是 /usr/local/bin/ 目录下没有 node 文件，那么就不执行这两行命令
+# 且保证 /usr/local/bin/ 目录下有 node 和 n 这两个文件
+# 若是 /usr/local/bin/ 目录下没有 node 和 n 文件，那么就不执行这两行命令
 # 可通过 **whereis node** 命令来查看
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
