@@ -135,17 +135,20 @@ npm config set registry https://registry.npm.taobao.org
 
 ```bash
 # 如果第一次无法成功升级
-# 需要执行完本小节中的命令后重新执行以下五行命令
+# 需要执行完本小节中的命令后重新执行以下六行命令
 sudo npm install -g -U npm
 sudo npm install -g -U n
 sudo n stable
 
 # 如果下载顺利
 # 且保证 /usr/local/bin/ 目录下有 node 这个文件
+# 若是 /usr/local/bin/ 目录下没有 node 文件，那么就不执行这两行命令
 # 可通过 **whereis node** 命令来查看
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
+sudo ln -sf /usr/local/bin/n /usr/bin/n
 
+# 如果安装并升级成功，则忽略以下
 # 如果无法下载
 # 由于 Ubuntu 18.04 通过 APT 安装的 nodejs 和 npm 版本太低，
 # 导致上面的操作无法成功，
@@ -164,7 +167,8 @@ sudo cp -vfr ~/Downloads/node-v14.16.1-linux-x64/* /usr/local/n/versions/node/14
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/nodejs
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/npm /usr/bin/npm
-# 然后再重新依次执行本节中最上面五行命令
+sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/n /usr/bin/n
+# 然后再重新依次执行本节中最上面的六行命令
 ```
 
 ## 安装依赖(通过 npm 安装)
@@ -181,6 +185,10 @@ sudo npm i -g flow-bin
 ```bash
 # 安装 Ruby
 sudo apt-get install ruby -y
+
+# Ubuntu 18.04 必须执行以下一行命令
+sudo gem install chef-utils -v 16.6.14
+
 sudo gem install mdl
 ```
 
