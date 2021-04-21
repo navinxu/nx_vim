@@ -141,12 +141,14 @@ sudo npm install -g -U n
 sudo n stable
 
 # 如果下载顺利
-# 且保证 /usr/local/bin/ 目录下有 node 和 n 这两个文件
-# 若是 /usr/local/bin/ 目录下没有 node 和 n 俩文件，那么就不执行这三行命令
+# 且保证 /usr/local/bin/ 目录下有 node 、npm 和 n 这三个文件
+# 挑选文件存在的分别执行，不存在的就不执行
+# 若是 /usr/local/bin/ 目录下没有 node 、npm 和 n 仨文件，那么就不执行这四行命令
 # 可通过 whereis node 和 whereis n 命令来查看
 sudo ln -sf /usr/local/bin/node /usr/bin/node
 sudo ln -sf /usr/local/bin/node /usr/bin/nodejs
 sudo ln -sf /usr/local/bin/n /usr/bin/n
+sudo ln -sf /usr/local/bin/npm /usr/bin/npm
 
 # 如果安装并升级成功，则忽略以下
 # 如果无法下载
@@ -168,7 +170,7 @@ sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/node
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/node /usr/bin/nodejs
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/npm /usr/bin/npm
 sudo ln -sf /usr/local/n/versions/node/14.16.1/bin/n /usr/bin/n
-# 然后再重新依次执行本节中最上面的六行命令
+# 然后再重新依次执行本节中最上面的七行命令
 ```
 
 ## 安装依赖(通过 npm 安装)
