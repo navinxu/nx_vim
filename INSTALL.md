@@ -386,11 +386,19 @@ sudo python3 -m pip install pynvim
 
 文件内容请参考：https://phpactor.readthedocs.io/en/develop/lsp/vim.html
 
-### 在 Vim 内，安装 Coc 的插件（Coc extensions）
+### 在 Vim 内，安装 Coc 的扩展（Coc extensions）
+
+#### 一行 Vim 命令安装所有需要的 Coc 扩展
+
+```vim
+" 有冒号表示在 Vim 的普通模式下进入命令模式
+" 安装完所有扩展，还需要安装依赖（接着就是安装各个扩展的依赖）
+:CocInstall coc-clangd coc-css coc-emmet coc-html coc-java coc-jedi coc-json coc-phpactor coc-sh coc-sql coc-tsserver coc-vimlsp
+```
 
 #### coc-clangd
 
-1. 此插件作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
+1. 此扩展作为 clangd 的前端，为 C/C++/ObjectC 提供代码提示服务。
 
 1. Clangd 的安装在本文的后面在介绍 YouCompleteMe 时有介绍。
 
@@ -409,7 +417,7 @@ sudo python3 -m pip install pynvim
 
 #### coc-css
 
-1. 此插件作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
+1. 此扩展作为 css (层叠样式表) 对 Coc 前端代码提示提供服务端功能。
 
 1. 安装方法： `:CocInstall coc-css`
 
@@ -472,7 +480,7 @@ sudo python3 -m pip install pynvim
 
 1. 安装依赖：
     * 到 https://www.oracle.com/java/technologies/javase-downloads.html 下载 JDK 11 最新版本（JDK 8 也可以，但是要求最新版本，也就是说 Ubuntu 20.04 所提供的版本不够高），找到 JDK 11 ，下载 DEB 包文件，假设下载的 DEB 包是 jdk-11.0.8_linux-x64_bin.deb ，执行 `sudo dpkg -i jdk-11.0.8_linux-x64_bin.deb` ，然后把 `/usr/lib/jvm/jdk-11.0.8/bin/` 目录的绝对路径追加到系统用户的 PATH 路径中（export PATH="/path/to/jdk-11/bin:${PATH}"，并把它写进 ~/.bashrc 文件中）。
-    * 在使用 Vim/NeoVim 打开任何 Java 文件之前（如果在进行此一步之前打开，那么要先卸载 coc-java 插件（ :CocUninstall coc-java ），然后重新安装此插件，然后进行这一步），到 http://mirrors.neusoft.edu.cn/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz 下载后端 jdt.ls ，把下载好的压缩包放到 `~/Downloads/` 目录，并就地解压缩，最后删除压缩包。
+    * 在使用 Vim/NeoVim 打开任何 Java 文件之前（如果在进行此一步之前打开，那么要先卸载 coc-java 扩展（ :CocUninstall coc-java ），然后重新安装此扩展，然后进行这一步），到 http://mirrors.neusoft.edu.cn/eclipse/jdtls/snapshots/jdt-language-server-latest.tar.gz 下载后端 jdt.ls ，把下载好的压缩包放到 `~/Downloads/` 目录，并就地解压缩，最后删除压缩包。
     * 配置：
 
     ```json
@@ -493,7 +501,7 @@ sudo python3 -m pip install pynvim
 
 #### coc-jedi
 
-1. coc.nvim 对于 Python 代码提示的插件，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
+1. coc.nvim 对于 Python 代码提示的扩展，基于 [jedi-language-server](https://github.com/pappasam/jedi-language-server)。
 
 1. 安装：
     * 安装 jedi-language-server：
@@ -816,7 +824,7 @@ Clangd completer enabled. If you are using .ycm_extra_conf.py files, make sure t
 
 那么就表示编译成功！
 
-由于 Coc-nvim 插件也可以作为 C/C++、JS、TS 代码提示的前端，因此以下命令也可不加上编译条件 `--js-completer --ts-completer --clangd-completer`。
+由于 Coc-nvim 扩展也可以作为 C/C++、JS、TS 代码提示的前端，因此以下命令也可不加上编译条件 `--js-completer --ts-completer --clangd-completer`。
 
 如果只需要 Java 的代码补全：
 
